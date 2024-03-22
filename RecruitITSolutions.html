@@ -1,111 +1,265 @@
-<!doctype html>
-<html lang="it">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RecruitITSolutions</title>
-   <!-- Collegamento al file CSS -->
-  <link href="RecruitITSolitions.css" rel="stylesheet" >
-  <!-- Collegamento a Bootstrap -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script> 
+  <link href="RecruitITSolutions.css" rel="stylesheet">
+  <title>RecruitITSolutions</title>
+  <link rel="icon" href="images/Logo_senzaScritte.jpg">
 
 </head>
-<body>
-  <!-- Sezione della barra di navigazione -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-dark">
 
-    <div class="container-fluid">
-      <!-- Brand della barra di navigazione -->
-      <a class="navbar-brand" href="#">
-        <img src="images/Logo_senzaScritte.png" alt="logo" class="d-block mx-auto" style="height: 75px;">
-      </a>
-      <!-- Pulsante di attivazione della barra di navigazione su dispositivi mobili -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- Elementi della barra di navigazione -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <!-- Menu a tendina - CHI SIAMO -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              CHI SIAMO
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Storia azienda</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Dipendenti</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Dirigenti</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Manager</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Tecnici</a></li>
-            </ul>
-          </li>
-          <!-- Menu a tendina - PARTNERS -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PARTNERS
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Lista partners</a></li>
-            </ul>
-          </li>
-          <!-- Menu a tendina - CONTATTI -->
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              CONTATTI
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Elenco contatti</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Form di aiuto</a></li>
-            </ul>
-          </li>
-          <!-- Menu a tendina - PORTALE HR -->
-          <li class="nav-item dropdown" id="portale">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PORTALE HR
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Login</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Registrati</a></li>
-            </ul>
-          </li>
+<body>
+  <header class="p-3 bg-dark text-white" id="header">
+    <div class="box">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center">
+        <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <img class="bi me-2" width="50" height="50" src="images/Logo_senzaScritte.jpg" aria-label="Bootstrap"
+            title="HOME"></img>
+        </a>
+        <h3 class="col-md-4 mb-md-0">RecruitITSolutions</h3>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            CHI SIAMO</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+            <li>
+          </ul>
+
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PARTNERS</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+          </ul>
+
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            CONTATTI</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-white" href="Form.html">Form di aiuto</a></li>
+          </ul>
+        </ul>
+
+        <ul class="nav col-12 col-lg-auto mb-2  mb-md-0">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PORTALE HR
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-white" href="Login.html">Login</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item text-white" href="Registrati">Registrati</a></li>
+          </ul>
         </ul>
       </div>
     </div>
-  </nav>
+  </header>
 
-  <!-- Carosello -->
-  <div id="carouselExample" class="carousel slide">
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" aria-label="Slide 1" class="active"
+        aria-current="true"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="images/carosello1.png" class="d-block w-100" alt="img" style="height: 650px;">
+        <img src="images/carosello1.jpg" class="bd-placeholder-img" width="100%" height="650px"
+          aria-hidden="true"></img>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1 class="titolo-carosello">Diventa un membro Recruit</h1>
+            <p class="lead">Entra a far parte della nostra comunità e accedi a vantaggi esclusivi! Sfrutta i nostri
+              servizi per raggiungere i tuoi obiettivi.</p>
+            <br>
+            <p><a class="btn btn-lg btn-primary" href="#INostriServizi" id="bottone-carosello">SCOPRI DI PIÙ</a></p>
+          </div>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="images/carosello2.jpg" class="d-block w-100" alt="img" style="height: 650px;">
+        <img src="images/carosello2.jpg" class="bd-placeholder-img" width="100%" height="650px"
+          aria-hidden="true"></img>
+        <div class="container">
+          <div class="carousel-caption">
+            <h1 class="titolo-carosello">Diventa un nostro partner</h1>
+            <p class="lead">Unisciti alla nostra squadra di partner e scopri privilegi unici! Insieme, possiamo realizzare i tuoi obiettivi.</p>
+            <br>
+            <p><a class="btn btn-lg btn-primary" href="Partners.html">SCOPRI DI PIÙ</a></p>
+          </div>
+        </div>
       </div>
       <div class="carousel-item">
-        <img src="images/carosello3.jpg" class="d-block w-100" alt="img" style="height: 650px;">
+        <img src="images/carosello3.jpg" class="bd-placeholder-img" width="100%" height="650px"
+          aria-hidden="true"></img>
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1 class="titolo-carosello">Hai bisogno di aiuto ?</h1>
+            <p class="lead">Hai bisogno di assistenza? Compila il nostro modulo di aiuto e insieme possiamo trovare la soluzione migliore per te!</p>
+            <br>
+            <p><a class="btn btn-lg btn-primary" href="Form.html">SCOPRI DI PIÙ</a></p>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Pulsanti per controllare il carosello -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Precedente</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Successivo</span>
+      <span class="visually-hidden">Successiva</span>
     </button>
   </div>
 
-  <!-- Script Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <div class="container marketing text-flex p-4">
+    <hr class="featurette-divider pt-3">
+    <div class="row featurette">
+      <div class="col-md-5 order-md-1 p-2 pb-4">
+        <img src="images/edificio.jpg" alt="edificio" width="500px" height="500px">
+      </div>
+      <div class="col-md-7 order-md-2">
+        <h2 class="heading p-3 pt-2">RECRUIT ITSOLUTIONS</h2>
+        <p class="lead p-3 pt-4">"RECRUIT ITSolutions è leader nel settore dell'informatica, offrendo una vasta gamma di
+          servizi mirati a soddisfare le esigenze tecnologiche di aziende e privati. Dalla consulenza IT alla gestione
+          di reti e sistemi, passando per lo sviluppo di software su misura e la cybersecurity, ci impegniamo a fornire
+          soluzioni innovative e affidabili. Con un team di esperti qualificati e una costante attenzione all'evoluzione
+          tecnologica, siamo pronti a guidarvi verso il successo digitale".</p>
+        <a href="Storia.html"><button class="bottone-edificio">SCOPRI DI PIÙ</button></a>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+  </div>
+
+  <div>
+    <div class="box-dati">
+      <div class="small-box-dati">
+        <h4 class="aziende text-center">10</h4>
+        <p class="p-aziende">Aziende</p>
+      </div>
+      <div class="small-box-dati">
+        <h4 class="aziende text-center">30</h4>
+        <p class="p-aziende">Professionisti</p>
+      </div>
+      <div class="small-box-dati">
+        <h4 class="aziende text-center">8</h4>
+        <p class="p-aziende">Partners</p>
+      </div>
+      <div class="small-box-dati">
+        <h4 class="aziende text-center">45</h4>
+        <p class="p-aziende">Certificazioni</p>
+      </div>
+    </div>
+    <br>
+    <a name="INostriServizi"></a>
+    </div>
+  </div>
+
+  <div class="container"><hr class="featurette-divider"></div>
+
+  <section class="p-2 text-center container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="INostriServizi pb-3">I NOSTRI SERVIZI</h1>
+        <p class="lead text-muted pb-5">Cercate soluzioni informatiche affidabili e innovative? Rivolgetevi a noi! Con
+          il
+          nostro team esperto, vi offriamo servizi personalizzati per ogni vostra esigenza tecnologica.
+          Dall'implementazione di sistemi sicuri alla gestione efficiente dei dati, siamo qui per garantire il successo
+          del vostro business. Affidatevi a noi per un futuro digitale senza problemi.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="p-3 text-center container">
+    <div class="box">
+      <div class="small-box">
+        <img src="images/consulenza.jpg" alt="images" width="90px" height="90px">
+        <h3 class="pt-3">CONSULENZA</h3>
+        <p class="lead text-muted pt-2 pb-5">Con la nostra esperienza e competenza, siamo qui per aiutarvi a risolvere i
+          problemi relativi alle soluzioni IT in modo efficace e tempestivo.</p>
+        <hr class="featurette-divider">
+      </div>
+      <div class="small-box">
+        <img src="images/sviluppo.jpg" alt="images" width="90px" height="90px">
+        <h3 class="pt-3">SVILUPPO SOFTWARE</h3>
+        <p class="lead text-muted pt-2 pb-5">Sfruttando la nostra vasta esperienza e competenza, siamo qui per fornirvi
+          un supporto completo e rapido nello sviluppo software, su misura per voi.</p>
+        <hr class="featurette-divider">
+      </div>
+      <div class="small-box">
+        <img src="images/formazione.jpg" alt="images" width="90px" height="90px">
+        <h3 class="pt-3">FORMAZIONE</h3>
+        <p class="lead text-muted pt-2 pb-3">Basandoci sulla nostra esperienza, ci dedichiamo a fornire un supporto
+          completo per la formazione, offrendo corsi personalizzati per l'arricchimento delle competenze individuali.
+        </p>
+        <hr class="featurette-divider">
+      </div>
+    </div>
+    <hr class="featurette-divider">
+  </div>
+  </a>
+
+  <div class="p-2 text-center container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="p-3">I NOSTRI PARTNERS</h1>
+      </div>
+       <div class="carousell">
+        <a href="https://itsincom.it/" target="_blank"><img src="images/itsincom.jpg" alt="ITSIncom" height="200px" width="300px" title="ITSIncom"></a>
+        <a href="https://www.mcdonalds.it/" target="_blank"><img src="images/mc.jpg" alt="McDonald's" height="200px" width="350px" title="McDonald's"></a> 
+        <a href="https://www.apple.com/it/" target="_blank"><img src="images/apple.jpg" alt="Apple" height="200px" width="350px" title="Apple"></a>
+        <a href="https://www.pirelli.com/" target="_blank"><img src="images/pirelli.jpg" alt="Pirelli" height="200px" width="350px" title="Pirelli"></a>  
+        <a href="https://www.nike.com/it/" target="_blank"><img src="images/nike.jpg" alt="Nike" height="250px" width="350px" title="Nike"></a>
+        <a href="https://www.rolex.com/it/" target="_blank"><img src="images/rolex.jpg" alt="Rolex" height="200px" width="300px" title="Rolex"></a>
+        <a href="https://www.nvidia.com/it-it/" target="_blank"><img src="images/nvidia.jpg" alt="Nvidia" height="230px" width="270px" title="Nvidia"></a>
+        <a href="https://www.nike.com/it/jordan" target="_blank" ><img src="images/jordan.jpg" alt="Jordan" height="200px" width="230px" title="Jordan"></a> 
+        </div>
+      </div>
+    </div>
+
+  <footer class="bg-dark text-white pt-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center border-top p-3">
+      <div class="col-md-2 d-flex align-items-center">
+        <span class="mb-3 mb-md-0">📞+39 123 4567 890
+        </span>
+      </div>
+      <div class="col-md-2 d-flex align-items-center">
+        <span class="mb-3 mb-md-0">© RecruitITSolutions
+        </span>
+    </div>
+      <ul class="nav col-md-1 d-flex align-items-center justify-content-end list">
+        <li class="ms-3"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img src="images/Instagram.jpg" class="bi" width="30px"
+              height="30px" title="Instagram"></img></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="RecruitITSolutions.html"><img src="images/home.jpg" class="bi" width="40px"
+                height="40px" title="Home"></img></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    $(document).ready(function(){
+      $('.carousell').slick({
+        infinite: false,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+      });
+    });
+  // </script>
 </body>
+
 </html>

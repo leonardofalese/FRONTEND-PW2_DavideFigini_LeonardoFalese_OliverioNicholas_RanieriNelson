@@ -21,21 +21,6 @@
     width: 400px;
 }
 
-.box-partners {
-    width: 100%;
-    justify-content: space-between;
-}
-
-.small-box-partners {
-    align-items: center;
-    width: 400px;
-    height: 250px;
-}
-
-#burger {
-    margin-left: 100px;
-}
-
 .dropdown-menu {
     border-top-color: aliceblue;
     background-color: #212529;
@@ -49,7 +34,6 @@
 .nav-link {
     color: white;
 }
-
 
 .nav-link:hover {
     color: rgb(40, 200, 255);
@@ -74,4 +58,32 @@
     border-radius: 5px;
     background-color: #e06920;
     color: white;
+}
+
+.box-dati {
+    width: 100%;
+    height: 180px;
+    background-image: url('images/dati.jpg');
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.aziende {
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.p-aziende {
+    color: white;
+    font-size: large;
+}
+
+.carousell {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

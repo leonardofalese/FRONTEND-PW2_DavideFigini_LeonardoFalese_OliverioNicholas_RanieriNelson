@@ -138,6 +138,7 @@
       color: #fff;
       padding: 10px 20px;
       border: none;
+      border-radius: 5px;
       cursor: pointer;
       font-size: 16px;
     }
@@ -153,67 +154,60 @@
 
 </head>
 
-<header class="p-3 bg-dark text-white" id="header">
-  <div class="box">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center">
-        <a href="RecruitITSolutions.html"
-          class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
-            aria-label="Bootstrap" title="HOME"></img>
-        </a>
-        <h3 class="col-md-4 mb-md-0">RecruitITSolutions</h3>
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            CHI SIAMO</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
-            <li>
-          </ul>
-
-          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            PARTNERS</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
-          </ul>
-
-          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            CONTATTI</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item text-white" href="Form.html">Form di aiuto</a></li>
-          </ul>
-        </ul>
-
-        <ul class="nav col-12 col-lg-auto mb-2  mb-md-0">
-          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            PORTALE HR
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item text-white" href="Login.html">Login</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li><a class="dropdown-item text-white" href="Registrati">Registrati</a></li>
-          </ul>
-        </ul>
-      </div>
-    </div>
-</header>
-
 <body>
+  <header class="p-3 bg-dark text-white" id="header">
+    <div class="box">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center">
+          <a href="RecruitITSolutions.html"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
+              aria-label="Bootstrap" title="HOME"></img>
+          </a>
+          <h3 class="col-md-4 mb-md-0">RecruitITSolutions</h3>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CHI SIAMO</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+              <li>
+            </ul>
+  
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PARTNERS</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+            </ul>
+  
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CONTATTI</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+            </ul>
+          </ul>
+  
+          <ul class="nav col-12 col-lg-auto mb-2  mb-md-0">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PORTALE HR
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+  </header>
+
   <div class="container text-center">
     <h1 class="titolo pt-3">I NOSTRI PARTNERS</h1>
     <div class="row">
       <div class="col">
-        <img src="Images/Partners/mc.jpg" class="image1" alt="image" width="500px" height="500px">
+        <a href="https://www.mcdonalds.it/" target="_blank">
+        <img src="Images/Partners/mc.jpg" class="image1" alt="image" width="500px" height="500px" title="McDonald's"></a>
       </div>
       <div class="col">
         <p class="text1">
@@ -263,11 +257,13 @@
             </p>
           </div>
           <div class="col">
-            <img src="Images/Partners/apple.jpg" class="image2" alt="image" width="500px" height="500px">
+            <a href="https://www.apple.com/it/" target="_blank">
+              <img src="Images/Partners/apple.jpg" class="image2" alt="image" width="500px" height="500px" title="Apple"></a>
           </div>
           <div class="row">
             <div class="col">
-              <img src="Images/Partners/itsincom.jpg" class="image3" alt="image" width="500px" height="200px">
+              <a href="https://itsincom.it/" target="_blank">
+                <img src="Images/Partners/itsincom.jpg" class="image3" alt="image" width="500px" height="200px" title="ITSIncom"></a>
             </div>
             <div class="col">
               <p class="text3">
@@ -302,14 +298,16 @@
                   </p>
                 </div>
                 <div class="col">
-                  <img src="Images/Partners/rolex.jpg" class="image4" alt="image" width="500px" height="500px">
+                  <a href="https://www.rolex.com/it/" target="_blank">
+                    <img src="Images/Partners/rolex.jpg" class="image4" alt="image" width="500px" height="500px" title="Rolex"></a>
                 </div>
 
 
                 <div class="container text-center">
                   <div class="row">
                     <div class="col">
-                      <img src="Images/Partners/jordan.jpg" class="image5" alt="image" width="500px" height="500px">
+                      <a href="https://www.nike.com/it/jordan" target="_blank">
+                      <img src="Images/Partners/jordan.jpg" class="image5" alt="image" width="500px" height="500px" title="Jordan"></a>
                     </div>
                     <div class="col">
                       <p class="text5">
@@ -346,12 +344,13 @@
                           </p>
                         </div>
                         <div class="col">
-                          <img src="Images/Partners/pirelli.jpg" class="image6" alt="image" width="500px"
-                            height="500px">
+                          <a href="https://www.pirelli.com/" target="_blank">
+                            <img src="Images/Partners/pirelli.jpg" class="image6" alt="image" width="500px" height="500px" title="Pirelli"></a>
                         </div>
                         <div class="row">
                           <div class="col">
-                            <img src="Images/Partners/nike.jpg" class="image7" lt="image" width="500px" height="500px">
+                            <a href="https://www.nike.com/it/jordan" target="_blank">
+                              <img src="Images/Partners/nike.jpg" class="image7" lt="image" width="500px" height="500px" title="Nike"></a>
                           </div>
                           <div class="col">
                             <p class="text7">
@@ -394,8 +393,8 @@
                                 </p>
                               </div>
                               <div class="col">
-                                <img src="Images/Partners/nvidia.jpg" class="image8" alt="image" width="500px"
-                                  height="500px">
+                                <a href="https://www.nvidia.com/it-it/" target="_blank">
+                                <img src="Images/Partners/nvidia.jpg" class="image8" alt="image" width="500px" height="500px" title="Nvidia"></a>
                               </div>
                             </div>
                           </div>
@@ -443,7 +442,7 @@
       <div class="col-md-6">
         <div class="form-group">
           <label for="email">Email aziendale:</label>
-          <input type="text" class="form-control" id="email-aziendale" name="email-aziendale" required
+          <input type="email" class="form-control" id="email-aziendale" name="email-aziendale" required
             placeholder="Inserisci qui l'email" />
         </div>
       </div>

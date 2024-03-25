@@ -1,119 +1,235 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="Instagram.css">
-<title>RecruitITSolutions | Instagram</title>
-<link rel="icon" href="images/Home Page/Footer/Instagram.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <title>RecruitITSolutions | Instagram</title>
+  <link rel="icon" href="images/Home Page/Footer/Instagram.jpg">
+
+  <style>
+    body {
+      background-color: rgb(145, 180, 210);
+    }
+
+    .container-post {
+      max-width: 80%;
+      margin: 20px auto;
+      background-color: #efefef;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #header {
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .dropdown-menu {
+      border-top-color: aliceblue;
+      background-color: #212529;
+      border-radius: 0;
+    }
+
+    .dropdown-item:hover {
+      background-color: gray;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover {
+      color: rgb(40, 200, 255);
+    }
+
+    .head-profilo {
+      text-align: center;
+    }
+
+    .foto-profilo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 20px;
+    }
+
+    .foto-profilo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nome-profilo {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .bio-profilo {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .stats-profilo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .stats-profilo div {
+      margin: 0 10px;
+      text-align: center;
+    }
+
+    .stats-profilo .stats-scritte {
+      font-size: 14px;
+      color: #999;
+    }
+
+    .stats-profilo .stats-valore {
+      font-size: 18px;
+    }
+
+    .box-post {
+      background-color: #efefef;
+      margin: auto;
+      padding-top: 0;
+      margin-bottom: 20px;
+      width: 85%;
+      height: 100%;
+      border: none;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .small-box {
+      width: 300px;
+      height: 310px;
+      background-color: white;
+      box-sizing: border-box;
+    }
+  </style>
 </head>
+
 <body>
 
-    <body>
-        <header class="p-3 bg-dark text-white" id="header">
-          <div class="box">
-          <div class="container">
-            <div class="d-flex flex-wrap align-items-center">
-              <a href="RecruitITSolutions.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg" aria-label="Bootstrap"
-                  title="HOME"></img>
-              </a>
-              <h3 class="col-md-4 mb-md-0">RecruitITSolutions</h3>
-              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  CHI SIAMO</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
-                  <li>
-                </ul>
-      
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  PARTNERS</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
-                </ul>
-      
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  CONTATTI</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item text-white" href="Form.html">Form di aiuto</a></li>
-                </ul>
+  <body>
+    <header class="p-3 bg-dark text-white" id="header">
+      <div class="box">
+        <div class="container">
+          <div class="d-flex flex-wrap align-items-center">
+            <a href="RecruitITSolutions.html"
+              class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
+                aria-label="Bootstrap" title="HOME"></img>
+            </a>
+            <h3 class="col-md-4 mb-md-0">RecruitITSolutions</h3>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CHI SIAMO</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+                <li>
               </ul>
-      
-              <ul class="nav col-12 col-lg-auto mb-2  mb-md-0">
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  PORTALE HR
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-white" href="Login.html">Login</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item text-white" href="Registrati.html">Registrati</a></li>
-                </ul>
-              </ul>
-            </div>
-          </div>
-        </header>
 
-<div class="container-post">
-    <div class="head-profilo">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PARTNERS</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+              </ul>
+
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CONTATTI</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+              </ul>
+            </ul>
+
+            <ul class="nav col-12 col-lg-auto mb-2  mb-md-0">
+              <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PORTALE HR
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+    </header>
+
+    <div class="container-post">
+      <div class="head-profilo">
         <div class="foto-profilo">
-            <img src="images/Instagram/fotoprofilo.jpg" alt="Profile" Picture>
+          <img src="images/Instagram/fotoprofilo.jpg" alt="Profile" Picture>
         </div>
         <div class="nome-profilo">Recruiter_ITSolutions</div>
         <div class="bio-profilo">Azienda che lavora nell ambito IT ormai da piu di 50 anni.</div>
         <div class="stats-profilo">
-            <div>
-                <div class="stats-valore">10'000</div>
-                <div class="stats-scritte">Followers</div>
-            </div>
-            <div>
-                <div class="stats-valore">12</div>
-                <div class="stats-scritte">Following</div>
-            </div>
-            <div>
-                <div class="stats-valore">3</div>
-                <div class="stats-scritte">Post</div>
-            </div>
+          <div>
+            <div class="stats-valore">10'000</div>
+            <div class="stats-scritte">Followers</div>
+          </div>
+          <div>
+            <div class="stats-valore">12</div>
+            <div class="stats-scritte">Following</div>
+          </div>
+          <div>
+            <div class="stats-valore">3</div>
+            <div class="stats-scritte">Post</div>
+          </div>
         </div>
-    </div>
-</div>
-
-<div class="box-post">
-    <div class="small-box pt-1"><img src="images/Instagram/1°post.jpg" alt="image" width="300px" height="300px"></div>
-    <div class="small-box pt-1"><img src="images/Instagram/2°post.jpg" alt="image" width="300px" height="300px"></div>
-    <div class="small-box pt-1"><img src="images/Instagram/3°post.jpg" alt="image" width="300px" height="300px"></div>
-</div>
-
-<footer class="bg-dark text-white pt-4">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center border-top p-3">
-      <div class="col-md-2 d-flex align-items-center">
-        <span class="mb-3 mb-md-0">📞+39 123 4567 890
-        </span>
       </div>
-      <div class="col-md-2 d-flex align-items-center">
-        <span class="mb-3 mb-md-0">© RecruitITSolutions
-        </span>
     </div>
-      <ul class="nav col-md-1 d-flex align-items-center justify-content-end list">
-        <li class="ms-3"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img src="images/Home Page/Footer/Instagram.jpg" class="bi" width="30px"
-              height="30px" title="Instagram"></img></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="RecruitITSolutions.html"><img src="images/Home Page/Footer/home.jpg" class="bi" width="40px"
-                height="40px" title="Home"></img></a></li>
-      </ul>
-    </div>
-  </footer>
 
-</body>
+    <div class="box-post">
+      <div class="small-box pt-1"><img src="images/Instagram/1°post.jpg" alt="image" width="300px" height="300px"></div>
+      <div class="small-box pt-1"><img src="images/Instagram/2°post.jpg" alt="image" width="300px" height="300px"></div>
+      <div class="small-box pt-1"><img src="images/Instagram/3°post.jpg" alt="image" width="300px" height="300px"></div>
+    </div>
+
+    <footer class="bg-dark text-white pt-4">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center border-top p-3">
+        <div class="col-md-2 d-flex align-items-center">
+          <span class="mb-3 mb-md-0">📞+39 123 4567 890
+          </span>
+        </div>
+        <div class="col-md-2 d-flex align-items-center">
+          <span class="mb-3 mb-md-0">© RecruitITSolutions
+          </span>
+        </div>
+        <ul class="nav col-md-1 d-flex align-items-center justify-content-end list">
+          <li class="ms-3"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
+                src="images/Home Page/Footer/Instagram.jpg" class="bi" width="30px" height="30px"
+                title="Instagram"></img></a></li>
+          <li class="ms-3"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
+                src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+  </body>
+
 </html>

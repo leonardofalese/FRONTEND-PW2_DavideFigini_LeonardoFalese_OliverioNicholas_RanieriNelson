@@ -1,102 +1,189 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Pagina dei Contatti</title>
+<html lang="it">
 
-    <!-- CSS di Bootstrap -->
-    <link
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <script>
-      function messaggioAlert() {
-        alert("Richiesta inviata correttamente, ti risponderemo al più presto");
-      }
-    </script>
-  </head>
-  <body><br>
-    <div class="container"> 
-      <h1>Contattaci</h1><br><br><br>
+<head>
 
-      <!-- Icona di Instagram -->
-      <div class="row d-flex justify-content-between align-items-center">
-        <div class="col" id="insta">
-            <a href="">
-                <img
-                  src="Instagram_icon.png"
-                  alt="Instagram"
-                  style="width: 60px; height: 60px"
-                />
-              </a>
-        </div>
-        <div class="col" id="tel">
-            <p>
-                <h2>Telefono: 012 234 56789</h2>
-            </p>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <title>RecruitITSolutions | Contatti</title>
+  <link rel="icon" href="images/Home Page/Header/Logo_senzaScritte.jpg">
+
+  <style>
+    body {
+      background-color: rgb(145, 180, 210);
+    }
+
+    #header {
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .dropdown-menu {
+      border-top-color: aliceblue;
+      background-color: #212529;
+      border-radius: 0;
+    }
+
+    .dropdown-item:hover {
+      background-color: gray;
+    }
+
+    .nav-link {
+      color: white;
+    }
+
+    .nav-link:hover {
+      color: rgb(40, 200, 255);
+    }
+
+    #pulsante:hover {
+      background-color: #4a8bc8;
+    }
+
+    #pulsante {
+      background-color: #4a8bc8;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .form-container {
+      background-color: #efefef;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+  </style>
+
+  <script>
+    function messaggioAlert() {
+      alert("Richiesta inviata correttamente, ti risponderemo al più presto");
+    }
+  </script>
+
+</head>
+
+<body>
+  <header class="p-3 bg-dark text-white" id="header">
+    <div class="box">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center">
+          <a href="RecruitITSolutions.html"
+            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
+              aria-label="Bootstrap" title="HOME"></img>
+          </a>
+          <h3 class="col-md-4 mb-md-0">RecruitITSolutions</h3>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CHI SIAMO</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+              <li>
+            </ul>
+
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PARTNERS</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+            </ul>
+
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              CONTATTI</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+            </ul>
+          </ul>
+
+          <ul class="nav col-12 col-lg-auto mb-2  mb-md-0">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PORTALE HR
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
+            </ul>
+          </ul>
         </div>
       </div>
-      
-      <br><br><br><br><br>
+  </header>
 
-      <!-- Form di Aiuto -->
+  <div class="container text-center pt-2">
+    <h1>Contattaci</h1>
 
-      <h2>Form di Aiuto</h2>
-      <form action="/submit_form" method="post" style="margin-top: 30px;">
-        <div class="form-group" style="clear:both;">
-          <label for="nome">Nome:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="nome"
-            name="nome"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="cognome">Cognome:</label>
-          <input
-            type="text"
-            class="form-control"
-            id="cognome"
-            name="cognome"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            class="form-control"
-            id="email"
-            name="email"
-            required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          />
-        </div>
-        <div class="form-group">
-          <label for="telefono">Telefono:</label>
-          <input
-            type="tel"
-            class="form-control"
-            id="telefono"
-            name="telefono"
-            required
-            pattern="\d{10}"
-          />
-        </div>
-        <div class="form-group">
-          <label for="messaggio">Messaggio:</label>
-          <textarea
-            class="form-control"
-            id="messaggio"
-            name="messaggio"
-            required
-          ></textarea><br><br>
-        </div>
-        <button type="submit" class="btn btn-primary" onclick="messaggioAlert()">
-          Invio
-        </button>
-      </form>
+    <div class="row d-flex justify-content-between align-items-center pt-3">
+      <div class="col" id="insta">
+        <a href="Instagram.html">
+          <img src="images/Contatti/instagram.jpg" alt="Instagram" width="150px" height="115px" title="Scrivici su Instagram">
+        </a>
+      </div>
+      <div class="col justify-content-text-center" id="tel">
+        <p>
+        <a href="tel:1234567890" target="_blank"><h2 class="telefono" title="Contattaci al telefono">📞+39 123 4567 890</h2></a>
+        <a href="mailto:recruit@itsolutions.com" target="_blank"><h2 class="email" title="Contattaci via email">recruit@itsolutions.com</h2></a>
+        </p>
+      </div>
     </div>
-  </body>
+<br>
+    <div class="form-container">
+      <form>
+        <div class="container p-3">
+        <h1>Compila il form di contatto</h1>
+        <label for="name">Nome:</label>
+        <input type="text" name="nome" id="nome" class="form-control" required placeholder="inserisci qui il tuo nome"><br><br>
+        <label for="surnamae">Cognome:</label>
+        <input type="text" name="cognome" id="cognome" class="form-control" required placeholder="inserisci qui il tuo cognome"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" class="form-control" required placeholder="inserisci qui la tua email"><br><br>
+            <label for="note" class="form-label"></label>
+            <textarea class="form-control" name="note" id="messaggio" rows="3" required placeholder="Inserisci qui il tuo messaggio..."></textarea>
+            </small>
+        </div>
+        <input type="submit" name="invio" value="Contattaci" id="pulsante">
+    </div>
+    </form>
+</div>
+  <br>
+  <footer class="bg-dark text-white pt-4">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center border-top p-3">
+      <div class="col-md-2 d-flex align-items-center">
+        <span class="mb-3 mb-md-0">📞+39 123 4567 890
+        </span>
+      </div>
+      <div class="col-md-2 d-flex align-items-center">
+        <span class="mb-3 mb-md-0">© RecruitITSolutions
+        </span>
+      </div>
+      <ul class="nav col-md-1 d-flex align-items-center justify-content-end list">
+        <li class="ms-3"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
+              src="images/Home Page/Footer/Instagram.jpg" class="bi" width="30px" height="30px"
+              title="Instagram"></img></a></li>
+        <li class="ms-3"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
+              src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <script src="scriptContatti.js"></script>
+</body>
+
 </html>

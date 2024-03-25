@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pagina dei Contatti</title>
+
+    <!-- CSS di Bootstrap -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      function messaggioAlert() {
+        alert("Richiesta inviata correttamente, ti risponderemo al più presto");
+      }
+    </script>
+  </head>
+  <body><br>
+    <div class="container"> 
+      <h1>Contattaci</h1><br><br><br>
+
+      <!-- Icona di Instagram -->
+      <div class="row d-flex justify-content-between align-items-center">
+        <div class="col" id="insta">
+            <a href="">
+                <img
+                  src="Instagram_icon.png"
+                  alt="Instagram"
+                  style="width: 60px; height: 60px"
+                />
+              </a>
+        </div>
+        <div class="col" id="tel">
+            <p>
+                <h2>Telefono: 012 234 56789</h2>
+            </p>
+        </div>
+      </div>
+      
+      <br><br><br><br><br>
+
+      <!-- Form di Aiuto -->
+
+      <h2>Form di Aiuto</h2>
+      <form action="/submit_form" method="post" style="margin-top: 30px;">
+        <div class="form-group" style="clear:both;">
+          <label for="nome">Nome:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nome"
+            name="nome"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="cognome">Cognome:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="cognome"
+            name="cognome"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          />
+        </div>
+        <div class="form-group">
+          <label for="telefono">Telefono:</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="telefono"
+            name="telefono"
+            required
+            pattern="\d{10}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="messaggio">Messaggio:</label>
+          <textarea
+            class="form-control"
+            id="messaggio"
+            name="messaggio"
+            required
+          ></textarea><br><br>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="messaggioAlert()">
+          Invio
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

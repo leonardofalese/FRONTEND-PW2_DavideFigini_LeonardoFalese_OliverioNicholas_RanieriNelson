@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>RecruitITSolutions | Dipendenti</title>
+    <link rel="icon" href="images/Home Page/Header/Logo_senzaScritte.jpg">
+
+    <style>
+        #header {
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .dropdown-menu {
+            border-top-color: aliceblue;
+            background-color: #212529;
+            border-radius: 0;
+        }
+
+        .dropdown-item:hover {
+            background-color: gray;
+        }
+
+        .nav-link {
+            color: white;
+        }
+
+        .nav-link:hover {
+            color: rgb(40, 200, 255);
+        }
+
+        body {
+            background-color: rgb(145, 180, 210); 
+        }
+
+    </style>
+
+    <script>
+        function filtraCategoria() {
+            let inputCategory = document.getElementById("categoria").value;
+
+            if ((inputCategory != "tecnico") && (inputCategory != "manager") && (inputCategory != "dirigente")) {
+                alert("*ERROR*/// inserisci una categoria valida");
+                return;
+            }
+
+            fetch("Dipendenti.json")
+                .then(response => response.json())
+                .then(data => {
+                    //data sono le nostre pizze
+                    console.log();
+                    //leggo la categoria scritta dall'utente nella textbox
+                    var categoria = document.getElementById("categoria").value;
+                    //filtro le transazioni
+                    var filtraCategoria = data.filter(t => t.categoria == categoria);
+                    drawDip(filtraCategoria);
+
+
+                });
+        }
+
+        function drawDip(data) {
+            //crea la tabella
+            let table = document.getElementById("dip");
+            //creo l'intestazione
+            table.innerHTML = "<tr><th>Categoria</th><th>Codice Fiscale</th><th>Nome</th><th>Cognome</th><th>Data assunzione</th><th>Nome riferrimento</th></tr>";
+            //ciclo le transazioni
+            for (let i = 0; i < data.length; i++) {
+                const listino = data[i];
+                //creo la riga
+                var row = table.insertRow(-1); // -1 per inserire in fondo
+                var cell = row.insertCell(-1); // -1 per inserire in fondo
+                cell.innerHTML = listino.categoria;
+                cell = row.insertCell(-1); // -1 per inserire in fondo
+                cell.innerHTML = listino.codiceFiscale;
+                cell = row.insertCell(-1); // -1 per inserire in fondo
+                cell.innerHTML = listino.nome;
+                cell = row.insertCell(-1); // -1 per inserire in fondo
+                cell.innerHTML = listino.cognome;
+                cell = row.insertCell(-1); // -1 per inserire in fondo
+                cell.innerHTML = listino.dataAssunzione;
+                cell = row.insertCell(-1); // -1 per inserire in fondo
+                cell.innerHTML = listino.nomeRiferimento;
+                cell = row.insertCell(-1); // -1 per inserire in fondo
+            }
+        }
+
+        function load() {
+            fetch("Dipendenti.json")
+                .then(response => response.json())
+                .then(data => {
+                    //data sono le nostre pizze
+                    console.log();
+                    drawDip(data);
+                });
+        }
+
+    </script>
+</head>
+
+<body onload="load()">
+    <header class="p-3 bg-dark text-white" id="header">
+        <div class="box">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center">
+                    <a href="RecruitITSolutions.html"
+                        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                        <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
+                            aria-label="Bootstrap" title="HOME"></img>
+                    </a>
+                    <h3 class="col-md-4 mb-md-0">RecruitITSolutions</h3>
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CHI SIAMO</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+                            <li>
+                        </ul>
+
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            PARTNERS</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+                        </ul>
+
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            CONTATTI</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="Form.html">Form di aiuto</a></li>
+                        </ul>
+                    </ul>
+
+                    <ul class="nav col-12 col-lg-auto mb-2  mb-md-0">
+                        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            PORTALE HR
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item text-white" href="Login.html">Login</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-white" href="Registrati.html">Registrati</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+    </header>
+
+<div class="container text-center p-4 pt-3">
+        <h1 class="titolo "><strong>I NOSTRI DIPENDENTI</strong></h1>
+        <p class="sottoTitolo pt-3">
+            <em>Inserisci nel campo la categoria del dipendente che si vuole visualizzare</em>
+        </p>
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-4">
+                <input type="text-box" id="categoria" placeholder="Inserisci categoria" class="form-control">
+            </div>
+            <div class="col col-lg-1">
+                <button class="btn btn-primary" onclick="filtraCategoria()">Filtra</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <table id="dip"></table>
+    </div>
+ </div>
+
+
+    <footer class="bg-dark text-white pt-4">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center border-top p-3">
+            <div class="col-md-2 d-flex align-items-center">
+                <span class="mb-3 mb-md-0">📞+39 123 4567 890
+                </span>
+            </div>
+            <div class="col-md-2 d-flex align-items-center">
+                <span class="mb-3 mb-md-0">© RecruitITSolutions
+                </span>
+            </div>
+            <ul class="nav col-md-1 d-flex align-items-center justify-content-end list">
+                <li class="ms-3"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
+                            src="images/Home Page/Footer/Instagram.jpg" class="bi" width="30px" height="30px"
+                            title="Instagram"></img></a></li>
+                <li class="ms-3"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
+                            src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px"
+                            title="Home"></img></a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>

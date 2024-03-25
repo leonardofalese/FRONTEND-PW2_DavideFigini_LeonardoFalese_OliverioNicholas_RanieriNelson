@@ -1,19 +1,12 @@
 function form(){
-    let inputNome = document.getElementById("nome").value;
-    let inputCognome = document.getElementById("cognome").value;
-    let inputEmail = document.getElementById("email").value;
-    let inputOggetto = document.getElementById("oggetto").value;
-    let inputLettera = document.getElementById("lettera").value;
+    let inputNome = document.getElementById("nome-azienda").value;
+    let inputEmail = document.getElementById("email-aziendale").value;
+
 
     let stampa = "";
 
     if(inputNome.trim() === ""){
-        alert("*ERROR*/// inserisci un nome!");
-        return;
-    }
-
-    if(inputCognome.trim() === ""){
-        alert("*ERROR*/// inserisci un cognome!");
+        alert("*ERROR*/// inserisci il nome dell'azienda!");
         return;
     }
 
@@ -36,20 +29,11 @@ function form(){
         return;
     }
 
-    if(inputOggetto.trim() === ""){
-        alert("*ERROR*/// inserisci un oggetto!");
-        return;
-    }
-
-    if(inputLettera.trim() === ""){
-        alert("*ERROR*/// inserisci un testo!");
-        return;
-    }
-
     var newP = document.createElement("p");
-    newP.textContent = "La lettera di richiamo è stata inviata con successo al dipendente";
+    newP.textContent = "La richiesta è stata inviata con successo";
     newP.id = "messaggio";
     invio.parentNode.replaceChildren(newP);
+
 }
 
 let invio = document.getElementById("pulsante");

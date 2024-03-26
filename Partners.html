@@ -13,8 +13,7 @@
   <link rel="icon" href="images/Home Page/Header/Logo_senzaScritte.jpg">
 
   <style>
-
-    body{
+    body {
       background-color: rgb(145, 180, 210);
     }
 
@@ -47,6 +46,28 @@
 
     .nav-link:hover {
       color: rgb(40, 200, 255);
+    }
+
+    .box-body {
+      width: 1000px;
+      height: 500px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .small-box-body {
+      width: 500px;
+      height: 500px;
+      text-align: center;
+      align-items: center;
+      align-content: space-around;
+      background-color: rgb(145, 180, 210);
+    }
+
+    h1 {
+      font-family: Arial;
     }
 
     .descrizione {
@@ -150,6 +171,221 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       text-align: center;
     }
+
+    .box-footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 1200px){
+      .box-body {
+        width: 800px;
+      }
+
+      #mc {
+        width: 400px;
+        height: 400px;
+      }
+
+      #apple {
+        width: 400px;
+        height: 400px;
+      }
+
+      #its {
+        width: 400px;
+        height: 150px;
+      }
+
+      #nike {
+        width: 400px;
+        height: 400px;
+      }
+
+      #pirelli {
+        width: 400px;
+        height: 400px;
+      }
+
+      #nvidia {
+        width: 400px;
+        height: 400px;
+      }
+
+      #jordan {
+        width: 400px;
+        height: 400px;
+      }
+
+      #rolex {
+        width: 400px;
+        height: 400px;
+      }
+    }
+
+    @media (max-width: 992px){
+      h3 {
+        text-align: center;
+      }
+
+      .box-body {
+        width: 600px;
+      }
+
+      #testo {
+        font-size: 13px;
+      }
+
+      #mc {
+        width: 300px;
+        height: 300px;
+      }
+
+      #apple {
+        width: 300px;
+        height: 300px;
+      }
+
+      #its {
+        width: 400px;
+        height: 150px;
+      }
+
+      #nike {
+        width: 300px;
+        height: 300px;
+      }
+
+      #pirelli {
+        width: 300px;
+        height: 300px;
+      }
+
+      #nvidia {
+        width: 300px;
+        height: 300px;
+      }
+
+      #jordan {
+        width: 300px;
+        height: 300px;
+      }
+
+      #rolex {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 768px){
+      .box-body {
+        width: 500px;
+      }
+
+      #testo {
+        font-size: 12px;
+      }
+
+      #mc {
+        width: 200px;
+        height: 200px;
+      }
+
+      #apple {
+        width: 200px;
+        height: 200px;
+      }
+
+      #its {
+        width: 300px;
+        height: 125px;
+      }
+
+      #nike {
+        width: 200px;
+        height: 200px;
+      }
+
+      #pirelli {
+        width: 200px;
+        height: 200px;
+      }
+
+      #nvidia {
+        width: 200px;
+        height: 200px;
+      }
+
+      #jordan {
+        width: 200px;
+        height: 200px;
+      }
+
+      #rolex {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 520px){
+      .box-body {
+        width: 400px;
+      }
+
+      #testo {
+        font-size: 11px;
+      }
+
+      #mc {
+        width: 100px;
+        height: 100px;
+      }
+
+      #apple {
+        width: 100px;
+        height: 100px;
+      }
+
+      #its {
+        width: 250px;
+        height: 125px;
+      }
+
+      #nike {
+        width: 200px;
+        height: 200px;
+      }
+
+      #pirelli {
+        width: 200px;
+        height: 200px;
+      }
+
+      #nvidia {
+        width: 200px;
+        height: 200px;
+      }
+
+      #jordan {
+        width: 200px;
+        height: 200px;
+      }
+
+      #rolex {
+        width: 200px;
+        height: 200px;
+      }
+
+      #form-container{
+        width: 400px;
+        height: 850px;
+      }
+
+    }
+
   </style>
 
 </head>
@@ -157,256 +393,219 @@
 <body>
   <header class="p-3 bg-dark text-white" id="header">
     <div class="box">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center">
-          <a href="RecruitITSolutions.html"
-            class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
-              aria-label="Bootstrap" title="HOME"></img>
-          </a>
-          <h3 class="col-md-4 mb-md-0">RecruitITSolutions</h3>
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              CHI SIAMO</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
-              <li>
-            </ul>
-  
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PARTNERS</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
-            </ul>
-  
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              CONTATTI</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
-            </ul>
-          </ul>
-  
-          <ul class="nav col-12 col-lg-auto mb-2  mb-md-0">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PORTALE HR
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
-            </ul>
-          </ul>
-        </div>
+      <div class="col-12 col-lg-auto me-lg-auto mb-1 justify-content-center text-align-center mb-md-0">
+        <a href="RecruitITSolutions.html" class="d-flex mb-2 mb-lg-0 justify-content-center">
+          <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
+            aria-label="Bootstrap" title="HOME"></img>
+        </a>
+        <h3 class="col-md-12 mb-md-0 justify-content-center" id="titolo-header">RecruitITSolutions</h3>
       </div>
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center text-align-center mb-md-0">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          CHI SIAMO</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+          <li>
+        </ul>
+
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          PARTNERS</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+        </ul>
+
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          CONTATTI</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+        </ul>
+      </ul>
+
+      <ul class="nav col-2 col-lg-auto mb-2 text-align-end mb-md-0">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          PORTALE HR
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
+        </ul>
+      </ul>
+    </div>
   </header>
 
-  <div class="container text-center">
-    <h1 class="titolo pt-3">I NOSTRI PARTNERS</h1>
-    <div class="row">
-      <div class="col">
-        <a href="https://www.mcdonalds.it/" target="_blank">
-        <img src="Images/Partners/mc.jpg" class="image1" alt="image" width="500px" height="500px" title="McDonald's"></a>
+  <div class="container p-4">
+    <div class="box-body">
+      <div class="small-box-body" id="Logo">
+        <a><img src="Images/Partners/mc.jpg" height="500px" width="500px" id="mc"></a>
       </div>
-      <div class="col">
-        <p class="text1">
-        <h1>McDonalds</h1>
-        <h2 class="descrizione">Siamo lieti di annunciare una partnership innovativa con McDonald's, un'icona globale
-          nel settore alimentare.
-          Abbiamo avuto l'opportunità di unire le nostre competenze
-          nel campo dell'informatica e della tecnologia all'esperienza di McDonald's nel fornire servizi di ristorazione
-          di alta qualità.
-          Insieme, stiamo rivoluzionando l'esperienza digitale nel settore alimentare, offrendo soluzioni avanzate e
-          innovative
-          che migliorano l'efficienza operativa, l'esperienza del cliente e la soddisfazione complessiva
-          Attraverso l'integrazione delle nostre tecnologie all'avanguardia, stiamo supportando McDonald's
-          nell'ottimizzazione dei processi,
-          nella gestione dei dati e nell'implementazione di soluzioni di digitalizzazione che consentono una connessione
-          più profonda e significativa con i propri clienti.
-          Questa partnership rappresenta un passo significativo nel nostro impegno per guidare il cambiamento e
-          l'innovazione nel settore alimentare.
-          Siamo entusiasti di continuare a lavorare a fianco di McDonald's per creare esperienze digitali straordinarie
-          che ridefiniscono il futuro del settore.
-          Ringraziamo McDonald's per la fiducia e l'opportunità di collaborare in questo percorso di innovazione e
-          progresso.</p>
-        </h2>
+      <div class="small-box-body" id="testo">
+        <p>
+        <h1>McDonald</h1>
+        </br>
+        Siamo lieti di annunciare una partnership innovativa con McDonald's, un'icona globale nel settore alimentare.
+        Unendo le nostre competenze tecnologiche all'esperienza di McDonald's, rivoluzioniamo l'esperienza digitale nel
+        settore. Offriamo soluzioni avanzate che migliorano l'efficienza operativa e la soddisfazione del cliente.
+        Supportiamo McDonald's nella gestione dei dati e nella digitalizzazione. Questa partnership guida il cambiamento
+        nel settore. Siamo entusiasti di creare esperienze digitali straordinarie con McDonald's, ringraziamo per la
+        fiducia.
+        </p>
       </div>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col">
-            <p class="text2">
-            <h1>Apple</h1>
-            <h2 class="descrizione">Siamo entusiasti di annunciare una partnership strategica con Apple, uno dei marchi
-              più iconici al mondo
-              nel campo della tecnologia e dell'innovazione.
-              Questa collaborazione unisce le forze di due giganti dell'industria per offrire soluzioni all'avanguardia
-              e rivoluzionarie per i nostri clienti.
-              Attraverso questa partnership, RecruitITSolutions integrerà la vasta gamma di prodotti e servizi Apple
-              nelle nostre offerte di soluzioni IT.
-              Questo include l'integrazione di dispositivi Apple come iPhone, iPad, Mac e Apple Watch nelle nostre
-              piattaforme ecosistema,
-              consentendo ai nostri clienti di sfruttare al massimo la potenza e la flessibilità di questi dispositivi
-              leader del settore.
-              Inoltre, lavoreremo a stretto contatto con Apple per sviluppare applicazioni personalizzate e soluzioni
-              software ottimizzate per l'ecosistema Apple,
-              garantendo un'esperienza utente senza soluzione di continuità e altamente performante. Grazie alla nostra
-              esperienza nel campo dell'IT e alla profonda conoscenza dei prodotti Apple,
-              saremo in grado di offrire soluzioni su misura che soddisfino le esigenze specifiche dei nostri clienti,
-              indipendentemente dalle dimensioni o dal settore di appartenenza.</h2>
-            </p>
-          </div>
-          <div class="col">
-            <a href="https://www.apple.com/it/" target="_blank">
-              <img src="Images/Partners/apple.jpg" class="image2" alt="image" width="500px" height="500px" title="Apple"></a>
-          </div>
-          <div class="row">
-            <div class="col">
-              <a href="https://itsincom.it/" target="_blank">
-                <img src="Images/Partners/itsincom.jpg" class="image3" alt="image" width="500px" height="200px" title="ITSIncom"></a>
-            </div>
-            <div class="col">
-              <p class="text3">
-              <h1>ITSINCOM</h1>
-              <h2 class="descrizione">Siamo entusiasti di annunciare una collaborazione innovativa con ITSINCOM,
-                un'istituzione dedicata all'eccellenza nell'istruzione tecnica e professionale.
-                Questa partnership strategica mira a unire le competenze e le risorse delle nostre due entità per
-                promuovere l'innovazione tecnologica e l'educazione di alta qualità
-                Attraverso questa collaborazione, RecruitITSolutions fornirà il suo supporto e la sua esperienza
-                nell'ambito delle tecnologie dell'informazione per arricchire l'esperienza educativa degli studenti
-                presso ITSINCOM.
-                Ci impegneremo a fornire risorse, consulenza e accesso a tecnologie all'avanguardia per potenziare i
-                programmi formativi della scuola e preparare gli studenti per le sfide del mondo digitale in rapida
-                evoluzione.</h2>
-              </p>
-            </div>
-            <div class="container text-center">
-              <div class="row">
-                <div class="col">
-                  <p class="text4">
-                  <h1>Rolex</h1>
-                  <h2 class="descrizione">Siamo lieti di annunciare una collaborazione innovativa con Rolex,
-                    un'icona di prestigio e artigianato nell'industria dell'orologeria.
-                    Questa partnership unisce l'eccellenza tecnologica di RecruitITSolutions con l'heritage di
-                    precisione e qualità di Rolex per creare esperienze uniche e innovative per i nostri clienti
-                    Attraverso questa collaborazione, RecruitITSolutions lavorerà a stretto contatto con Rolex per
-                    integrare le ultime tecnologie digitali nei prestigiosi orologi Rolex.
-                    Questo potrebbe includere l'introduzione di funzionalità smartwatch, connettività IoT (Internet
-                    delle cose) e applicazioni per dispositivi indossabili
-                    che arricchiscono l'esperienza dell'utente e offrono funzionalità aggiuntive senza compromettere
-                    l'eleganza e la tradizione associate al marchio Rolex.</h2>
-                  </p>
-                </div>
-                <div class="col">
-                  <a href="https://www.rolex.com/it/" target="_blank">
-                    <img src="Images/Partners/rolex.jpg" class="image4" alt="image" width="500px" height="500px" title="Rolex"></a>
-                </div>
-
-
-                <div class="container text-center">
-                  <div class="row">
-                    <div class="col">
-                      <a href="https://www.nike.com/it/jordan" target="_blank">
-                      <img src="Images/Partners/jordan.jpg" class="image5" alt="image" width="500px" height="500px" title="Jordan"></a>
-                    </div>
-                    <div class="col">
-                      <p class="text5">
-                      <h1>Jordan</h1>
-                      <h2 class="descrizione">Siamo entusiasti di annunciare una collaborazione senza precedenti con
-                        Jordan Brand, un'icona globale nel mondo dello sport e della moda streetwear.
-                        Questa partnership unisce l'innovazione tecnologica di RecruitITSolutions con il prestigio e lo
-                        stile distintivo di Jordan Brand per creare esperienze uniche e rivoluzionarie per i nostri
-                        clienti.
-                        Attraverso questa collaborazione, RecruitITSolutions e Jordan Brand lavoreranno insieme per
-                        integrare le più recenti tecnologie digitali nel mondo del footwear e dell'abbigliamento
-                        sportivo.
-                        Questo potrebbe includere l'introduzione di scarpe da ginnastica "smart" con funzionalità di
-                        tracciamento delle prestazioni, connettività IoT (Internet delle cose) e integrazione con
-                        dispositivi indossabili
-                        per massimizzare il comfort e le prestazioni degli atleti e degli appassionati di sport.!</h2>
-                      </p>
-                    </div>
-                    <div class="container text-center">
-                      <div class="row">
-                        <div class="col">
-                          <p class="text6">
-                          <h1>Pirelli</h1>
-                          <h2 class="descrizione">Siamo lieti di annunciare una collaborazione innovativa con Pirelli,
-                            un'icona nel settore dei pneumatici e dell'innovazione tecnologica nel mondo
-                            dell'automobilismo.
-                            Questa partnership unisce l'eccellenza tecnologica di RecruitITSolutions con l'expertise di
-                            Pirelli nel campo della mobilità, per creare soluzioni all'avanguardia per i nostri clienti.
-                            Attraverso questa collaborazione, RecruitITSolutions lavorerà a stretto contatto con Pirelli
-                            per integrare tecnologie digitali avanzate nei pneumatici e nei servizi connessi.
-                            Questo potrebbe includere l'implementazione di sensori IoT (Internet delle cose) nei
-                            pneumatici per monitorare in tempo reale lo stato di usura, la pressione e la temperatura,
-                            migliorando la sicurezza e l'efficienza del veicolo.</h2>
-                          </p>
-                        </div>
-                        <div class="col">
-                          <a href="https://www.pirelli.com/" target="_blank">
-                            <img src="Images/Partners/pirelli.jpg" class="image6" alt="image" width="500px" height="500px" title="Pirelli"></a>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <a href="https://www.nike.com/it/jordan" target="_blank">
-                              <img src="Images/Partners/nike.jpg" class="image7" lt="image" width="500px" height="500px" title="Nike"></a>
-                          </div>
-                          <div class="col">
-                            <p class="text7">
-                            <h1>Nike</h1>
-                            <h2 class="descrizione">Siamo entusiasti di annunciare una partnership rivoluzionaria con
-                              Nike,
-                              un'icona globale nell'industria dell'abbigliamento sportivo e dell'innovazione nel settore
-                              dell'athleisure.
-                              Questa collaborazione unisce l'eccellenza tecnologica di [Nome dell'Azienda IT] con la
-                              reputazione di Nike nel settore dello sport e della moda, per creare esperienze uniche e
-                              all'avanguardia per i nostri clienti
-                              Attraverso questa collaborazione, [Nome dell'Azienda IT] e Nike lavoreranno insieme per
-                              integrare le più recenti tecnologie digitali negli articoli sportivi e negli accessori
-                              Nike.
-                              Questo potrebbe includere l'implementazione di sensori di movimento, monitoraggio delle
-                              prestazioni e connettività IoT (Internet delle cose) nei prodotti Nike,
-                              consentendo agli atleti e agli appassionati di sport di monitorare e ottimizzare le loro
-                              prestazioni in modo più efficace che mai.</h2>
-                            </p>
-                          </div>
-                          <div class="container text-center">
-                            <div class="row">
-                              <div class="col">
-                                <p class="text8">
-                                <h1>Nvidia</h1>
-                                <h2 class="descrizione">Siamo lieti di annunciare una collaborazione innovativa con
-                                  NVIDIA,
-                                  un'azienda rinomata per la sua tecnologia grafica e per l'innovazione nel settore
-                                  dell'elaborazione parallela.
-                                  Questa partnership unisce l'expertise tecnologica di [Nome dell'Azienda IT] con la
-                                  potenza di calcolo e l'intelligenza artificiale di NVIDIA per offrire soluzioni
-                                  all'avanguardia per i nostri clienti.
-                                  Attraverso questa collaborazione, [Nome dell'Azienda IT] integrerà le tecnologie
-                                  avanzate di NVIDIA nei suoi prodotti e servizi,
-                                  sfruttando la potenza di calcolo delle GPU NVIDIA e le capacità di machine learning
-                                  per migliorare le prestazioni e l'efficienza delle nostre soluzioni IT.
-                                  Questo potrebbe includere lo sviluppo di applicazioni e servizi basati
-                                  sull'intelligenza artificiale, come l'analisi dei dati, la visione computerizzata e la
-                                  sicurezza informatica avanzata.</h2>
-                                </p>
-                              </div>
-                              <div class="col">
-                                <a href="https://www.nvidia.com/it-it/" target="_blank">
-                                <img src="Images/Partners/nvidia.jpg" class="image8" alt="image" width="500px" height="500px" title="Nvidia"></a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    </div>
+    <div class="box-body">
+      <div class="small-box-body" id="testo">
+        <p>
+        <h1>Apple</h1>
+        </br>
+        Siamo entusiasti di annunciare una partnership strategica tra Noi e Apple,
+        leader nel settore delle soluzioni IT innovative, e Apple, uno dei marchi più iconici al mondo nel campo della
+        tecnologia e dell'innovazione.
+        Questa collaborazione unisce le forze di due giganti dell'industria per offrire soluzioni all'avanguardia e
+        rivoluzionarie per i nostri clienti.
+        Attraverso questa partnership, RecruitITSolutions integrerà la vasta gamma di prodotti e servizi Apple nelle
+        nostre offerte di soluzioni IT.
+        Questo include l'integrazione di dispositivi Apple come iPhone, iPad, Mac e Apple Watch nelle nostre piattaforme
+        ecosistema,
+        consentendo ai nostri clienti di sfruttare al massimo la potenza e la flessibilità di questi dispositivi leader
+        del settore.
+        Inoltre, lavoreremo a stretto contatto con Apple per sviluppare applicazioni personalizzate e soluzioni software
+        ottimizzate per l'ecosistema Apple,
+        garantendo un'esperienza utente senza soluzione di continuità e altamente performante. Grazie alla nostra
+        esperienza nel campo dell'IT e alla profonda conoscenza dei prodotti Apple.
+        </p>
+      </div>
+      <div class="small-box-body" id="Logo">
+        <a><img src="Images/Partners/apple.jpg" height="500px" width="500px" id="apple"></a>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="small-box-body" id="Logo">
+        <a><img src="Images/Partners/itsincom.jpg" height="250px" width="500px" id="its"></a>
+      </div>
+      <div class="small-box-body" id="testo">
+        <p class="ITSINCOM">
+        <h1>ITSINCOM</h1>
+        </br>
+        Siamo entusiasti di annunciare una collaborazione innovativa tra RecruitITSolutions,
+        un leader nel settore delle soluzioni IT avanzate, e ITSINCOM, un'istituzione dedicata all'eccellenza
+        nell'istruzione tecnica e professionale.
+        Questa partnership strategica mira a unire le competenze e le risorse delle nostre due entità per promuovere
+        l'innovazione tecnologica e l'educazione di alta qualità
+        Attraverso questa collaborazione, RecruitITSolutions fornirà il suo supporto e la sua esperienza nell'ambito
+        delle tecnologie dell'informazione per arricchire l'esperienza educativa degli studenti presso ITSINCOM.
+        Ci impegneremo a fornire risorse, consulenza e accesso a tecnologie all'avanguardia per potenziare i programmi
+        formativi della scuola e preparare gli studenti per le sfide del mondo digitale in rapida evoluzione.
+        </p>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="small-box-body" id="testo">
+        <p>
+        <h1>Nike</h1>
+        </br>
+        Siamo entusiasti di annunciare una partnership rivoluzionaria tra [Nome dell'Azienda IT],
+        un'azienda leader nell'innovazione tecnologica, e Nike, un'icona globale nell'industria dell'abbigliamento
+        sportivo e dell'innovazione nel settore dell'athleisure.
+        Questa collaborazione unisce l'eccellenza tecnologica di [Nome dell'Azienda IT] con la reputazione di Nike nel
+        settore dello sport e della moda, per creare esperienze uniche e all'avanguardia per i nostri clienti
+        Attraverso questa collaborazione, [Nome dell'Azienda IT] e Nike lavoreranno insieme per integrare le più recenti
+        tecnologie digitali negli articoli sportivi e negli accessori Nike.
+        Questo potrebbe includere l'implementazione di sensori di movimento, monitoraggio delle prestazioni e
+        connettività IoT (Internet delle cose) nei prodotti Nike,
+        consentendo agli atleti e agli appassionati di sport di monitorare e ottimizzare le loro prestazioni in modo più
+        efficace che mai.
+        </p>
+      </div>
+      <div class="small-box-body" id="Logo">
+        <a><img src="Images/Partners/nike.jpg" height="500px" width="500px" id="nike"></a>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="small-box-body" id="Logo">
+        <a><img src="Images/Partners/pirelli.jpg" height="500px" width="500px" id="pirelli"></a>
+      </div>
+      <div class="small-box-body" id="testo">
+        <p>
+        <h1> Pirelli</h1>
+        </br>
+        Siamo lieti di annunciare una collaborazione innovativa tra RecruitITSolutions,
+        un leader nel campo delle soluzioni tecnologiche avanzate, e Pirelli, un'icona nel settore dei pneumatici e
+        dell'innovazione tecnologica nel mondo dell'automobilismo.
+        Questa partnership unisce l'eccellenza tecnologica di RecruitITSolutions con l'expertise di Pirelli nel campo
+        della mobilità, per creare soluzioni all'avanguardia per i nostri clienti.
+        Attraverso questa collaborazione, RecruitITSolutions lavorerà a stretto contatto con Pirelli per integrare
+        tecnologie digitali avanzate nei pneumatici e nei servizi connessi.
+        Questo potrebbe includere l'implementazione di sensori IoT (Internet delle cose) nei pneumatici per monitorare
+        in tempo reale lo stato di usura, la pressione e la temperatura,
+        migliorando la sicurezza e l'efficienza del veicolo.
+        </p>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="small-box-body" id="testo">
+        <p>
+        <h1>Nvidia</h1>
+        </br>
+        Siamo lieti di annunciare una collaborazione innovativa tra [Nome dell'Azienda IT],
+        un leader nel campo delle soluzioni IT avanzate, e NVIDIA, un'azienda rinomata per la sua tecnologia grafica e
+        per l'innovazione nel settore dell'elaborazione parallela.
+        Questa partnership unisce l'expertise tecnologica di [Nome dell'Azienda IT] con la potenza di calcolo e
+        l'intelligenza artificiale di NVIDIA per offrire soluzioni all'avanguardia per i nostri clienti.
+        Attraverso questa collaborazione, [Nome dell'Azienda IT] integrerà le tecnologie avanzate di NVIDIA nei suoi
+        prodotti e servizi,
+        sfruttando la potenza di calcolo delle GPU NVIDIA e le capacità di machine learning per migliorare le
+        prestazioni e l'efficienza delle nostre soluzioni IT.
+        Questo potrebbe includere lo sviluppo di applicazioni e servizi basati sull'intelligenza artificiale, come
+        l'analisi dei dati, la visione computerizzata e la sicurezza informatica avanzata.
+        </p>
+      </div>
+      <div class="small-box-body" id="Logo">
+        <a><img src="Images/Partners/nvidia.jpg" height="500px" width="500px" id="nvidia"></a>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="small-box-body" id="Logo">
+        <a><img src="Images/Partners/jordan.jpg" height="500px" width="500px" id="jordan"></a>
+      </div>
+      <div class="small-box-body" id="testo">
+        <p>
+        <h1>Jordan</h1>
+        </br>
+        Siamo entusiasti di annunciare una collaborazione senza precedenti tra RecruitITSolutions,
+        un'azienda leader nel settore delle soluzioni IT innovative, e Jordan Brand, un'icona globale nel mondo dello
+        sport e della moda streetwear.
+        Questa partnership unisce l'innovazione tecnologica di RecruitITSolutions con il prestigio e lo stile distintivo
+        di Jordan Brand per creare esperienze uniche e rivoluzionarie per i nostri clienti.
+        Attraverso questa collaborazione, RecruitITSolutions e Jordan Brand lavoreranno insieme per integrare le più
+        recenti tecnologie digitali nel mondo del footwear e dell'abbigliamento sportivo.
+        Questo potrebbe includere l'introduzione di scarpe da ginnastica "smart" con funzionalità di tracciamento delle
+        prestazioni, connettività IoT (Internet delle cose) e integrazione con dispositivi indossabili
+        per massimizzare il comfort e le prestazioni degli atleti e degli appassionati di sport.
+        </p>
+      </div>
+    </div>
+    <div class="box-body">
+      <div class="small-box-body" id="testo">
+        <p>
+        <h1>Rolex</h1>
+        </br>
+        Siamo lieti di annunciare una collaborazione innovativa tra RecruitITSolutions,
+        un pioniere nel campo delle soluzioni tecnologiche avanzate, e Rolex, un'icona di prestigio e artigianato
+        nell'industria dell'orologeria.
+        Questa partnership unisce l'eccellenza tecnologica di RecruitITSolutions con l'heritage di precisione e qualità
+        di Rolex per creare esperienze uniche e innovative per i nostri clienti
+        Attraverso questa collaborazione, RecruitITSolutions lavorerà a stretto contatto con Rolex per integrare le
+        ultime tecnologie digitali nei prestigiosi orologi Rolex.
+        Questo potrebbe includere l'introduzione di funzionalità smartwatch, connettività IoT (Internet delle cose) e
+        applicazioni per dispositivi indossabili
+        che arricchiscono l'esperienza dell'utente e offrono funzionalità aggiuntive senza compromettere l'eleganza e la
+        tradizione associate al marchio Rolex.
+        </p>
+      </div>
+      <div class="small-box-body" id="Logo">
+        <a><img src="Images/Partners/rolex.jpg" height="500px" width="500px" id="rolex"></a>
       </div>
     </div>
   </div>
@@ -434,14 +633,14 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <label for="nome">Nome azienda:</label>
-          <input type="text " class="form-control" id="nome-azienda" name="nome-azienda" required
+          <label for="nome" class="col-12 text-start">Nome azienda:</label>
+          <input type="text" class="form-control" id="nome-azienda" name="nome-azienda" required
             placeholder="Inserisci qui il nome della azienda" />
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <label for="email">Email aziendale:</label>
+          <label for="email" class="col-12 text-start">Email aziendale:</label>
           <input type="email" class="form-control" id="email-aziendale" name="email-aziendale" required
             placeholder="Inserisci qui l'email" />
         </div>
@@ -450,26 +649,25 @@
     <br>
     <input type="submit" name="invio" value="Invia richiesta" id="pulsante"><br><br>
   </div>
-<br>
-  <footer class="bg-dark text-white pt-4">
-    <div class="container d-flex flex-wrap justify-content-between align-items-center border-top p-3">
-      <div class="col-md-2 d-flex align-items-center">
-        <span class="mb-3 mb-md-0">📞+39 123 4567 890
+  <br>
+  <footer class="bg-dark text-white p-4">
+    <div class="box-footer">
+    <div class="text-align-start">
+        <span class="justify-content-center">📞+39 123 4567 890
         </span>
       </div>
-      <div class="col-md-2 d-flex align-items-center">
-        <span class="mb-3 mb-md-0">© RecruitITSolutions
+      <div class="text-align-center">
+        <span class="justify-content-center">© RecruitITSolutions
         </span>
       </div>
-      <ul class="nav col-md-1 d-flex align-items-center justify-content-end list">
-        <li class="ms-3"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
-              src="images/Home Page/Footer/Instagram.jpg" class="bi" width="30px" height="30px"
+      <ul class="nav d-flex col-text-align-end mb-md-0">
+        <li class="justify-content-center"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
+              src="images/Home Page/Footer/Instagram.jpg" class="bi" width="40px" height="40px"
               title="Instagram"></img></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
-              src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a>
-        </li>
+        <li class="justify-content-center"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
+              src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a></li>
       </ul>
-    </div>
+  </div>
   </footer>
 
   <script src="scriptPartners.js"></script>

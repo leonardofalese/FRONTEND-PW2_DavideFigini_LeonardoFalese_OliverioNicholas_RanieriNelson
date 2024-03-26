@@ -1,0 +1,26 @@
+[
+  {
+    "categoria": "tecnico",
+    "codiceFiscale": "ABCD12345",
+    "nome": "Mario",
+    "cognome": "Rossi",
+    "dataAssunzione": "03/05/1995",
+    "nomeRiferimento": "VWX852147963"
+  },
+  {
+    "categoria": "tecnico",
+    "codiceFiscale": "EFGH67890",
+    "nome": "Giulia",
+    "cognome": "Verdi",
+    "dataAssunzione": "10/12/2000",
+    "nomeRiferimento": "GHIJ70315"
+  },
+  {
+    "categoria": "tecnico",
+    "codiceFiscale": "MNO159357486",
+    "nome": "Marco",
+    "cognome": "Gialli",
+    "dataAssunzione": "15/04/2000",
+    "nomeRiferimento": "PQRS94627"
+  }
+]

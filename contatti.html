@@ -12,12 +12,26 @@
   <link rel="icon" href="images/Home Page/Header/Logo_senzaScritte.jpg">
 
   <style>
+    @font-face {
+      font-family: 'couture';
+      src: url('../FRONTEND PW2/Font Header/couture-bld.otf') format('opentype'),
+    }
+
     body {
       background-color: rgb(145, 180, 210);
     }
 
     #header {
       flex-wrap: wrap;
+    }
+
+    h3 {
+      text-align: center;
+      font-family: 'couture';
+    }
+
+    #titolo {
+      font-family: 'couture';
     }
 
     .box {
@@ -41,6 +55,7 @@
 
     .nav-link {
       color: white;
+      font-family: 'couture';
     }
 
     .nav-link:hover {
@@ -71,19 +86,11 @@
 
     .box-footer {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
-
-    @media (max-width: 992px){
-      h3 {
-        text-align: center;
-    }
-  }
-
-
   </style>
 
   <script>
@@ -97,52 +104,51 @@
 <body>
   <header class="p-3 bg-dark text-white" id="header">
     <div class="box">
-          <div class="col-12 col-lg-auto me-lg-auto mb-1 justify-content-center text-align-center mb-md-0">
-          <a href="RecruitITSolutions.html"
-            class="d-flex mb-2 mb-lg-0 justify-content-center">
-            <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
-              aria-label="Bootstrap" title="HOME"></img>
+      <div class="col-12 justify-content-center text-align-center">
+        <a href="RecruitITSolutions.html" class="d-flex justify-content-center text-align-center">
+          <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
+            aria-label="Bootstrap" title="HOME"></img>
+        </a>
+        <h3 class="col-12 justify-content-center text-align-center pt-2" id="titolo-header">Recruit ITSolutions</h3>
+      </div>
+      <ul class="nav col-12 justify-content-center text-align-center">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          CHI SIAMO</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+          <li>
+        </ul>
+
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          PARTNERS</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+        </ul>
+
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          CONTATTI</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+        </ul>
+
+        <ul class="nav col-2 col-lg-auto mb-2 mb-md-0">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PORTALE HR
           </a>
-          <h3 class="col-md-12 mb-md-0 justify-content-center" id="titolo-header">RecruitITSolutions</h3>
-        </div>
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center text-align-center mb-md-0">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              CHI SIAMO</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
-              <li>
-            </ul>
-
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PARTNERS</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
-            </ul>
-
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              CONTATTI</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
-            </ul>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
           </ul>
-
-          <ul class="nav col-2 col-lg-auto mb-2 text-align-end mb-md-0">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PORTALE HR
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
-            </ul>
-          </ul>
-        </div>
+        </ul>
+      </ul>
+    </div>
   </header>
 
   <div class="container text-center pt-2">
-    <h1>Contattaci</h1>
+    <h1 id="titolo">Contattaci</h1>
 
     <div class="row d-flex justify-content-between align-items-center pt-3 pb-3">
       <div class="col" id="insta">
@@ -154,10 +160,10 @@
       <div class="col justify-content-text-center" id="tel">
         <p>
           <a href="tel:1234567890" target="_blank">
-            <h2 class="telefono" title="Contattaci al telefono">📞+39 123 4567 890</h2>
+            <h2 class="telefono" title="Contattaci al telefono" id="titolo">📞+39 123 4567 890</h2>
           </a>
           <a href="mailto:recruit@itsolutions.com" target="_blank">
-            <h2 class="email" title="Contattaci via email">recruit@itsolutions.com</h2>
+            <h2 class="email" title="Contattaci via email" id="titolo">recruit@itsolutions.com</h2>
           </a>
         </p>
       </div>
@@ -166,7 +172,7 @@
     <div class="form-container">
       <form>
         <div class="container p-3">
-          <h1 class="pb-3">Compila il form di contatto</h1>
+          <h1 class="pb-3" id="titolo">Compila il form di contatto</h1>
           <div class="row d-flex justify-content-between align-items">
             <div class="col">
               <label for="name" class="col-12 text-start">Nome:</label>
@@ -194,12 +200,12 @@
   <br>
   <footer class="bg-dark text-white p-4">
     <div class="box-footer">
-    <div class="text-align-start">
-        <span class="justify-content-center">📞+39 123 4567 890
+      <div class="text-align-start">
+        <span class="justify-content-center" id="titolo">📞+39 123 4567 890
         </span>
       </div>
       <div class="text-align-center">
-        <span class="justify-content-center">© RecruitITSolutions
+        <span class="justify-content-center" id="titolo">© RecruitITSolutions
         </span>
       </div>
       <ul class="nav d-flex col-text-align-end mb-md-0">
@@ -209,7 +215,7 @@
         <li class="justify-content-center"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
               src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a></li>
       </ul>
-  </div>
+    </div>
   </footer>
   <script src="scriptContatti.js"></script>
 </body>

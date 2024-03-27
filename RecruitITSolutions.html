@@ -16,7 +16,12 @@
   <title>RecruitITSolutions</title>
   <link rel="icon" href="images/Home Page/Header/Logo_senzaScritte.jpg">
 
-  <style>   
+  <style>
+    @font-face {
+      font-family: 'couture';
+      src: url('../FRONTEND PW2/Font Header/couture-bld.otf') format('opentype'),
+    }
+
     #contanier {
       margin-left: 5px;
       margin-right: 5px;
@@ -28,6 +33,15 @@
 
     }
 
+    h3 {
+      text-align: center;
+      font-family: 'couture';
+    }
+
+    #titolo {
+      font-family: 'couture';
+    }
+
     #header {
       flex-wrap: wrap;
     }
@@ -37,7 +51,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-evenly;
     }
 
     .small-box {
@@ -57,6 +71,7 @@
 
     .nav-link {
       color: white;
+      font-family: 'couture';
     }
 
     .nav-link:hover {
@@ -114,273 +129,277 @@
 
     .box-footer {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
     }
 
 
-  @media (max-width: 1400px) {
-    #foto-edificio {
-      width: 400px;
-      height: 400px;
-    }
-  }
-
-  @media (max-width: 1200px) {
-    #colonne {
-      margin: auto;
+    @media (max-width: 1400px) {
+      #foto-edificio {
+        width: 400px;
+        height: 400px;
+      }
     }
 
-    #foto-edificio {
-      height: 350px;
-      width: 350px;
-      justify-content: center;
+    @media (max-width: 1200px) {
+      #colonne {
+        margin: auto;
+      }
+
+      #foto-edificio {
+        height: 350px;
+        width: 350px;
+        justify-content: center;
+      }
+
+      #edificio {
+        text-align: center;
+      }
+
+      #paragrafo-edificio {
+        width: 100%;
+      }
+
+      #its {
+        height: 100px;
+        width: 250px;
+      }
+
+      #mc {
+        height: 150px;
+        width: 250px;
+      }
+
+      #apple {
+        height: 150px;
+        width: 250px;
+      }
+
+      #pirelli {
+        height: 150px;
+        width: 200px;
+      }
+
+      #nike {
+        height: 150px;
+        width: 250px;
+      }
+
+      #rolex {
+        height: 150px;
+        width: 250px;
+      }
+
+      #nvidia {
+        height: 150px;
+        width: 230px;
+      }
+
+      #jordan {
+        height: 150px;
+        width: 230px;
+      }
     }
 
-    #edificio {
-      text-align: center;
+    @media (max-width: 1020px) {
+      .slick-next.slick-arrow {
+        display: none;
+      }
+
+      .slick-prev.slick-arrow {
+        display: none;
+      }
+
+      #foto-edificio {
+        height: 300px;
+        width: 300px;
+        justify-content: center;
+      }
+
+      #its {
+        height: 80px;
+        width: 210px;
+      }
+
+      #mc {
+        height: 120px;
+        width: 240px;
+      }
+
+      #apple {
+        height: 120px;
+        width: 220px;
+      }
+
+      #pirelli {
+        height: 150px;
+        width: 170px;
+      }
+
+      #nike {
+        height: 150px;
+        width: 250px;
+      }
+
+      #rolex {
+        height: 130px;
+        width: 180px;
+      }
+
+      #nvidia {
+        height: 130px;
+        width: 180px;
+      }
+
+      #jordan {
+        height: 130px;
+        width: 180px;
+      }
     }
 
-    #paragrafo-edificio {
-      width: 100%;
+    @media (max-width: 768px) {
+      header {
+        width: 100%;
+      }
+
+      #foto-edificio {
+        height: 250px;
+        width: 250px;
+        justify-content: center;
+      }
+
+      #its {
+        height: 60px;
+        width: 180px;
+      }
+
+      #mc {
+        height: 100px;
+        width: 220px;
+      }
+
+      #apple {
+        height: 100px;
+        width: 200px;
+      }
+
+      #pirelli {
+        height: 130px;
+        width: 130px;
+      }
+
+      #nike {
+        height: 130px;
+        width: 150px;
+      }
+
+      #rolex {
+        height: 100px;
+        width: 130px;
+      }
+
+      #nvidia {
+        height: 100px;
+        width: 130px;
+      }
+
+      #jordan {
+        height: 100px;
+        width: 130px;
+      }
     }
 
-    #its{
-      height: 100px;
-      width: 250px;
+    @media (max-width: 600px) {
+      #its {
+        height: 40px;
+        width: 160px;
+      }
+
+      #mc {
+        height: 80px;
+        width: 200px;
+      }
+
+      #apple {
+        height: 80px;
+        width: 170px;
+      }
+
+      #pirelli {
+        height: 110px;
+        width: 120px;
+      }
+
+      #nike {
+        height: 110px;
+        width: 130px;
+      }
+
+      #rolex {
+        height: 80px;
+        width: 110px;
+      }
+
+      #nvidia {
+        height: 80px;
+        width: 110px;
+      }
+
+      #jordan {
+        height: 80px;
+        width: 110px;
+      }
+
+      footer {
+        width: 100%;
+      }
+
+
     }
 
-    #mc{
-      height: 150px;
-      width: 250px;
+    @media (max-width: 450px) {
+      #its {
+        height: 40px;
+        width: 130px;
+      }
+
+      #mc {
+        height: 80px;
+        width: 150px;
+      }
+
+      #apple {
+        height: 80px;
+        width: 130px;
+      }
+
+      #pirelli {
+        height: 110px;
+        width: 90px;
+      }
+
+      #nike {
+        height: 110px;
+        width: 100px;
+      }
+
+      #rolex {
+        height: 80px;
+        width: 80px;
+      }
+
+      #nvidia {
+        height: 80px;
+        width: 80px;
+      }
+
+      #jordan {
+        height: 70px;
+        width: 50px;
+      }
     }
-
-    #apple{
-      height: 150px;
-      width: 250px;
-    }
-
-    #pirelli{
-      height: 150px;
-      width: 200px;
-    }
-
-    #nike{
-      height: 150px;
-      width: 250px;
-    }
-
-    #rolex{
-      height: 150px;
-      width: 250px;
-    }
-
-    #nvidia{
-      height: 150px;
-      width: 230px;
-    }
-
-    #jordan{
-      height: 150px;
-      width: 230px;
-    }
-  }
-
-  @media (max-width: 1020px) {
-    #foto-edificio {
-      height: 300px;
-      width: 300px;
-      justify-content: center;
-    }
-
-    h3 {
-      text-align: center;
-    }
-
-    #its{
-      height: 80px;
-      width: 210px;
-    }
-
-    #mc{
-      height: 120px;
-      width: 240px;
-    }
-
-    #apple{
-      height: 120px;
-      width: 220px;
-    }
-
-    #pirelli{
-      height: 150px;
-      width: 190px;
-    }
-
-    #nike{
-      height: 150px;
-      width: 250px;
-    }
-
-    #rolex{
-      height: 130px;
-      width: 180px;
-    }
-
-    #nvidia{
-      height: 130px;
-      width: 180px;
-    }
-
-    #jordan{
-      height: 130px;
-      width: 180px;
-    }
-  }
-
-  @media (max-width: 768px){
-    header {
-      width: 100%;
-    }
-    #foto-edificio {
-      height: 250px;
-      width: 250px;
-      justify-content: center;
-    }
-
-    #its{
-      height: 60px;
-      width: 180px;
-    }
-
-    #mc{
-      height: 100px;
-      width: 220px;
-    }
-
-    #apple{
-      height: 100px;
-      width: 200px;
-    }
-
-    #pirelli{
-      height: 130px;
-      width: 150px;
-    }
-
-    #nike{
-      height: 130px;
-      width: 150px;
-    }
-
-    #rolex{
-      height: 100px;
-      width: 130px;
-    }
-
-    #nvidia{
-      height: 100px;
-      width: 130px;
-    }
-
-    #jordan{
-      height: 100px;
-      width: 130px;
-    }
-  }
-
-  @media (max-width: 600px){
-    #its{
-      height: 40px;
-      width: 160px;
-    }
-
-    #mc{
-      height: 80px;
-      width: 200px;
-    }
-
-    #apple{
-      height: 80px;
-      width: 180px;
-    }
-
-    #pirelli{
-      height: 110px;
-      width: 130px;
-    }
-
-    #nike{
-      height: 110px;
-      width: 130px;
-    }
-
-    #rolex{
-      height: 80px;
-      width: 110px;
-    }
-
-    #nvidia{
-      height: 80px;
-      width: 110px;
-    }
-
-    #jordan{
-      height: 80px;
-      width: 110px;
-    }
-
-    footer {
-      width: 100%;
-    }
-
-
-  }
-
-  @media (max-width: 450px){
-    #its{
-      height: 40px;
-      width: 130px;
-    }
-
-    #mc{
-      height: 80px;
-      width: 150px;
-    }
-
-    #apple{
-      height: 80px;
-      width: 130px;
-    }
-
-    #pirelli{
-      height: 110px;
-      width: 90px;
-    }
-
-    #nike{
-      height: 110px;
-      width: 100px;
-    }
-
-    #rolex{
-      height: 80px;
-      width: 80px;
-    }
-
-    #nvidia{
-      height: 80px;
-      width: 80px;
-    }
-
-    #jordan{
-      height: 70px;
-      width: 50px;
-    }
-  }
-
   </style>
 
 </head>
@@ -388,48 +407,47 @@
 <body>
   <header class="p-3 bg-dark text-white" id="header">
     <div class="box">
-          <div class="col-12 col-lg-auto me-lg-auto mb-1 justify-content-center text-align-center mb-md-0">
-          <a href="RecruitITSolutions.html"
-            class="d-flex mb-2 mb-lg-0 justify-content-center">
-            <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
-              aria-label="Bootstrap" title="HOME"></img>
+      <div class="col-12 justify-content-center text-align-center">
+        <a href="RecruitITSolutions.html" class="d-flex justify-content-center text-align-center">
+          <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
+            aria-label="Bootstrap" title="HOME"></img>
+        </a>
+        <h3 class="col-12 justify-content-center text-align-center pt-2" id="titolo-header">Recruit ITSolutions</h3>
+      </div>
+      <ul class="nav col-12 justify-content-center text-align-center">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          CHI SIAMO</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+          <li>
+        </ul>
+
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          PARTNERS</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+        </ul>
+
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          CONTATTI</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+        </ul>
+
+        <ul class="nav col-2 col-lg-auto mb-2 mb-md-0">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PORTALE HR
           </a>
-          <h3 class="col-md-12 mb-md-0 justify-content-center" id="titolo-header">RecruitITSolutions</h3>
-        </div>
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center text-align-center mb-md-0">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              CHI SIAMO</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
-              <li>
-            </ul>
-
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PARTNERS</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
-            </ul>
-
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              CONTATTI</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
-            </ul>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
           </ul>
-
-          <ul class="nav col-2 col-lg-auto mb-2 text-align-end mb-md-0">
-            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PORTALE HR
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
-            </ul>
-          </ul>
-        </div>
+        </ul>
+      </ul>
+    </div>
   </header>
 
   <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -497,7 +515,7 @@
         <img src="images/Home Page/Storia/edificio.jpg" id="foto-edificio" alt="edificio" width="500px" height="500px">
       </div>
       <div class="col-md-7 order-md-2" id="paragrafo-edificio">
-        <h2 class="heading p-3 pt-2">RECRUIT ITSOLUTIONS</h2>
+        <h2 class="heading p-3 pt-2" id="titolo">RECRUIT ITSOLUTIONS</h2>
         <p class="lead p-3 pt-4">"RECRUIT ITSolutions è leader nel settore dell'informatica, offrendo una vasta gamma di
           servizi mirati a soddisfare le esigenze tecnologiche di aziende e privati. Dalla consulenza IT alla gestione
           di reti e sistemi, passando per lo sviluppo di software su misura e la cybersecurity, ci impegniamo a fornire
@@ -540,7 +558,7 @@
   <section class="p-2 text-center container">
     <div class="row">
       <div class="col-12">
-        <h1 class="INostriServizi pb-3">I NOSTRI SERVIZI</h1>
+        <h1 class="INostriServizi pb-3" id="titolo">I NOSTRI SERVIZI</h1>
         <p class="lead text-muted pb-5">Cercate soluzioni informatiche affidabili e innovative? Rivolgetevi a noi! Con
           il
           nostro team esperto, vi offriamo servizi personalizzati per ogni vostra esigenza tecnologica.
@@ -582,9 +600,9 @@
   <div class="p-2 text-center container">
     <div class="row">
       <div class="col-12">
-        <h1 class="p-3">I NOSTRI PARTNERS</h1>
+        <h1 class="p-3" id="titolo">I NOSTRI PARTNERS</h1>
       </div>
-      <div class="carousell">
+      <div class="carousel-partners">
         <a href="https://itsincom.it/" target="_blank"><img src="images/Home Page/Partners/itsincom.jpg" alt="ITSIncom"
             height="150px" width="350px" title="ITSIncom" id="its"></a>
         <a href="https://www.mcdonalds.it/" target="_blank"><img src="images/Home Page/Partners/mc.jpg" alt="McDonald's"
@@ -607,27 +625,27 @@
 
   <footer class="bg-dark text-white p-4">
     <div class="box-footer">
-    <div class="text-align-start">
-        <span class="justify-content-center">📞+39 123 4567 890
+      <div class="text-align-start">
+        <span class="justify-content-center" id="titolo">📞+39 123 4567 890
         </span>
       </div>
       <div class="text-align-center">
-        <span class="justify-content-center">© RecruitITSolutions
+        <span class="justify-content-center" - id="titolo">© RecruitITSolutions
         </span>
       </div>
-      <ul class="nav d-flex col-text-align-end mb-md-0">
+      <ul class="nav d-flex justify-content-center col-text-align-end mb-md-0">
         <li class="justify-content-center"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
               src="images/Home Page/Footer/Instagram.jpg" class="bi" width="40px" height="40px"
               title="Instagram"></img></a></li>
         <li class="justify-content-center"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
               src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a></li>
       </ul>
-  </div>
+    </div>
   </footer>
 
   <script>
     $(document).ready(function () {
-      $('.carousell').slick({
+      $('.carousel-partners').slick({
         infinite: false,
         slidesToShow: 4,
         slidesToScroll: 4,

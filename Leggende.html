@@ -2,219 +2,233 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <title>RecruitITSolutions | Dirigenti</title>
-    <link rel="icon" href="images/Home Page/Header/Logo_senzaScritte.jpg">
+  <title>RecruitITSolutions | Dirigenti</title>
+  <link rel="icon" href="images/Home Page/Header/Logo_senzaScritte.jpg">
 
-    <style>
-        #header {
-            flex-wrap: wrap;
-        }
+  <style>
+    @font-face {
+      font-family: 'couture';
+      src: url('../FRONTEND PW2/Font Header/couture-bld.otf') format('opentype'),
+    }
 
-        .box {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-around;
-        }
+    #header {
+      flex-wrap: wrap;
+    }
 
-        .dropdown-menu {
-            border-top-color: aliceblue;
-            background-color: #212529;
-            border-radius: 0;
-        }
+    h3 {
+      text-align: center;
+      font-family: 'couture';
+    }
 
-        .dropdown-item:hover {
-            background-color: gray;
-        }
+    #titolo {
+      font-family: 'couture';
+    }
 
-        .nav-link {
-            color: white;
-        }
-
-        .nav-link:hover {
-            color: rgb(40, 200, 255);
-        }
-
-        body {
-            background-color: rgb(145, 180, 210);
-        }
-        .box-footer {
+    .box {
+      width: 100%;
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .dropdown-menu {
+      border-top-color: aliceblue;
+      background-color: #212529;
+      border-radius: 0;
+    }
+
+    .dropdown-item:hover {
+      background-color: gray;
+    }
+
+    .nav-link {
+      color: white;
+      font-family: 'couture';
+    }
+
+    .nav-link:hover {
+      color: rgb(40, 200, 255);
+    }
+
+    body {
+      background-color: rgb(145, 180, 210);
+    }
+
+    .container {
+      min-height: 525px;
+    }
+
+    .box-footer {
+      display: flex;
+      flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
 
-        @media (max-width: 992px){
-            h3 {
-                text-align: center;
-            }
-        }
+    @media (min-width: 992px) {
+      .container {
+        min-height: 600px;
+      }
+    }
 
-        @media(max-width: 768px){
-            th:nth-child(1),
-            td:nth-child(1) {
-                display: none;
-            }
+    @media(max-width: 768px) {
 
-            th:nth-child(5),
-            td:nth-child(5) {
-                display: none;
-            }
-        }
+      th:nth-child(1),
+      td:nth-child(1) {
+        display: none;
+      }
 
+      th:nth-child(5),
+      td:nth-child(5) {
+        display: none;
+      }
+    }
+  </style>
 
-    
-    </style>
+  <script>
+    function drawDip(data) {
+      let table = document.getElementById("dip");
+      table.innerHTML = "<tr><th>Codice Fiscale</th><th>Nome</th><th>Cognome</th><th>Data assunzione</th><th>Nome riferrimento</th></tr>";
+      for (let i = 0; i < data.length; i++) {
+        const listino = data[i];
+        var row = table.insertRow(-1);
+        var cell = row.insertCell(-1);
+        cell.innerHTML = listino.codiceFiscale;
+        cell = row.insertCell(-1);
+        cell.innerHTML = listino.nome;
+        cell = row.insertCell(-1);
+        cell.innerHTML = listino.cognome;
+        cell = row.insertCell(-1);
+        cell.innerHTML = listino.dataAssunzione;
+        cell = row.insertCell(-1);
+        cell.innerHTML = listino.nomeRiferimento;
+        cell = row.insertCell(-1);
+      }
+    }
 
-    <script>
-        function drawDip(data) {
-            //crea la tabella
-            let table = document.getElementById("dip");
-            //creo l'intestazione
-            table.innerHTML = "<tr><th>Codice Fiscale</th><th>Nome</th><th>Cognome</th><th>Data assunzione</th><th>Nome riferrimento</th></tr>";
-            //ciclo le transazioni
-            for (let i = 0; i < data.length; i++) {
-                const listino = data[i];
-                //creo la riga
-                var row = table.insertRow(-1); // -1 per inserire in fondo
-                var cell = row.insertCell(-1); // -1 per inserire in fondo
-                cell.innerHTML = listino.codiceFiscale;
-                cell = row.insertCell(-1); // -1 per inserire in fondo
-                cell.innerHTML = listino.nome;
-                cell = row.insertCell(-1); // -1 per inserire in fondo
-                cell.innerHTML = listino.cognome;
-                cell = row.insertCell(-1); // -1 per inserire in fondo
-                cell.innerHTML = listino.dataAssunzione;
-                cell = row.insertCell(-1); // -1 per inserire in fondo
-                cell.innerHTML = listino.nomeRiferimento;
-                cell = row.insertCell(-1); // -1 per inserire in fondo
-            }
-        }
+    function load() {
+      fetch("Leggende.json")
+        .then(response => response.json())
+        .then(data => {
+          console.log();
+          drawDip(data);
+        });
+    }
 
-        function load() {
-            fetch("Leggende.json")
-                .then(response => response.json())
-                .then(data => {
-                    //data sono le nostre pizze
-                    console.log();
-                    drawDip(data);
-                });
-        }
-
-    </script>
+  </script>
 
 </head>
 
 <body onload="load()">
-    <header class="p-3 bg-dark text-white" id="header">
-        <div class="box">
-              <div class="col-12 col-lg-auto me-lg-auto mb-1 justify-content-center text-align-center mb-md-0">
-              <a href="RecruitITSolutions.html"
-                class="d-flex mb-2 mb-lg-0 justify-content-center">
-                <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
-                  aria-label="Bootstrap" title="HOME"></img>
-              </a>
-              <h3 class="col-md-12 mb-md-0 justify-content-center" id="titolo-header">RecruitITSolutions</h3>
-            </div>
-              <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center text-align-center mb-md-0">
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  CHI SIAMO</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
-                  <li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    </li>
-                    <li><a class="dropdown-item text-white" href="Tecnici.html">Tecnici</a></li>
-                    <li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    </li>
-                    <li><a class="dropdown-item text-white" href="Manager.html">Manager</a></li>
-                    <li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    </li>
-                    <li><a class="dropdown-item text-white" href="Dirigenti.html">Dirigenti</a></li>
-                    <li>
-                    <li>
-                        <hr class="dropdown-divider">
-                    </li>
-                    </li>
-                    <li><a class="dropdown-item text-white" href="Leggende.html">Leggende</a></li>
-                    <li>
-                </ul>
-    
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  PARTNERS</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
-                </ul>
-    
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  CONTATTI</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
-                </ul>
-              </ul>
-    
-              <ul class="nav col-2 col-lg-auto mb-2 text-align-end mb-md-0">
-                <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  PORTALE HR
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
-                </ul>
-              </ul>
-            </div>
-      </header>
+  <header class="p-3 bg-dark text-white" id="header">
+    <div class="box">
+      <div class="col-12 justify-content-center text-align-center">
+        <a href="RecruitITSolutions.html" class="d-flex justify-content-center text-align-center">
+          <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
+            aria-label="Bootstrap" title="HOME"></img>
+        </a>
+        <h3 class="col-12 justify-content-center text-align-center pt-2" id="titolo-header">Recruit ITSolutions
+        </h3>
+      </div>
+      <ul class="nav col-12 justify-content-center text-align-center">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          CHI SIAMO</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Storia.html">Storia azienda</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item text-white" href="Dipendenti.html">Dipendenti</a></li>
+          <li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          </li>
+          <li><a class="dropdown-item text-white" href="Tecnici.html">Tecnici</a></li>
+          <li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          </li>
+          <li><a class="dropdown-item text-white" href="Manager.html">Manager</a></li>
+          <li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          </li>
+          <li><a class="dropdown-item text-white" href="Dirigenti.html">Dirigenti</a></li>
+          <li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          </li>
+          <li><a class="dropdown-item text-white" href="Leggende.html">Leggende</a></li>
+          <li>
+        </ul>
 
-    <div class="container text-center p-4 pt-3">
-        <h1 class="titolo "><strong>LE NOSTRE LEGGENDE</strong></h1>
-        <p class="sottoTitolo pt-3">
-            Ecco la lista dei dipendenti assunti prima del 1° Gennaio 2001</p>
-        <div class="row">
-            <table id="dip"></table>
-        </div>
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          PARTNERS</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Partners.html">Lista partners</a></li>
+        </ul>
+
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          CONTATTI</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
+        </ul>
+
+        <ul class="nav col-2 col-lg-auto mb-2 mb-md-0">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PORTALE HR
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di
+                richiamo</a></li>
+          </ul>
+        </ul>
+      </ul>
     </div>
+  </header>
+
+  <div class="container text-center p-4 pt-3">
+    <h1 class="titolo" id="titolo"><strong>LE NOSTRE LEGGENDE</strong></h1>
+    <p class="sottoTitolo pt-3">
+      Ecco la lista dei dipendenti assunti prima del 1° Gennaio 2001</p>
+    <div class="row">
+      <table id="dip"></table>
+    </div>
+  </div>
 
 </body>
 
 <footer class="bg-dark text-white p-4">
-    <div class="box-footer">
+  <div class="box-footer">
     <div class="text-align-start">
-        <span class="justify-content-center">📞+39 123 4567 890
-        </span>
-      </div>
-      <div class="text-align-center">
-        <span class="justify-content-center">© RecruitITSolutions
-        </span>
-      </div>
-      <ul class="nav d-flex col-text-align-end mb-md-0">
-        <li class="justify-content-center"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
-              src="images/Home Page/Footer/Instagram.jpg" class="bi" width="40px" height="40px"
-              title="Instagram"></img></a></li>
-        <li class="justify-content-center"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
-              src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a></li>
-      </ul>
+      <span class="justify-content-center" id="titolo">📞+39 123 4567 890
+      </span>
+    </div>
+    <div class="text-align-center">
+      <span class="justify-content-center" id="titolo">© RecruitITSolutions
+      </span>
+    </div>
+    <ul class="nav d-flex col-text-align-end mb-md-0">
+      <li class="justify-content-center"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
+            src="images/Home Page/Footer/Instagram.jpg" class="bi" width="40px" height="40px"
+            title="Instagram"></img></a></li>
+      <li class="justify-content-center"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
+            src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a></li>
+    </ul>
   </div>
-  </footer>
+</footer>
 
 </body>
 

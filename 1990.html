@@ -11,6 +11,11 @@
   <link rel="icon" href="images/Home Page/Header/Logo_senzaScritte.jpg">
 
   <style>
+    @font-face {
+      font-family: 'couture';
+      src: url('../FRONTEND PW2/Font Header/couture-bld.otf') format('opentype'),
+    }
+
     #contanier {
       margin-left: 5px;
       margin-right: 5px;
@@ -20,6 +25,15 @@
       height: 100%;
       background-color: rgb(145, 180, 210);
 
+    }
+
+    h3 {
+      text-align: center;
+      font-family: 'couture';
+    }
+
+    #titolo {
+      font-family: 'couture';
     }
 
     #header {
@@ -51,6 +65,7 @@
 
     .nav-link {
       color: white;
+      font-family: 'couture';
     }
 
     .nav-link:hover {
@@ -61,7 +76,7 @@
       color: white;
     }
 
-    .box-anno{
+    .box-anno {
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -102,32 +117,28 @@
 
     .box-footer {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       align-items: center;
       justify-content: space-between;
     }
 
     @media (max-width: 1399px) {
-    #foto-storia {
-      margin: auto;
-      height: 300px;
-      width: 1100px;
+      #foto-storia {
+        margin: auto;
+        height: 300px;
+        width: 1100px;
+      }
     }
-  }
 
     @media (max-width: 1020px) {
       #foto-storia {
         height: 300px;
         width: 800px;
       }
-
-      h3 {
-        text-align: center;
-      }
     }
 
-    @media (max-width: 768px){
+    @media (max-width: 768px) {
       #foto-storia {
         height: 200px;
       }
@@ -139,14 +150,14 @@
 <body>
   <header class="p-3 bg-dark text-white" id="header">
     <div class="box">
-      <div class="col-12 col-lg-auto me-lg-auto mb-1 justify-content-center text-align-center mb-md-0">
-        <a href="RecruitITSolutions.html" class="d-flex mb-2 mb-lg-0 justify-content-center">
+      <div class="col-12 justify-content-center text-align-center">
+        <a href="RecruitITSolutions.html" class="d-flex justify-content-center text-align-center">
           <img class="bi me-2" width="50" height="50" src="images/Home Page/Header/Logo_senzaScritte.jpg"
             aria-label="Bootstrap" title="HOME"></img>
         </a>
-        <h3 class="col-md-12 mb-md-0 justify-content-center" id="titolo-header">RecruitITSolutions</h3>
+        <h3 class="col-12 justify-content-center text-align-center pt-2" id="titolo-header">Recruit ITSolutions</h3>
       </div>
-      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center text-align-center mb-md-0">
+      <ul class="nav col-12 justify-content-center text-align-center">
         <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           CHI SIAMO</a>
         <ul class="dropdown-menu">
@@ -169,14 +180,14 @@
         <ul class="dropdown-menu">
           <li><a class="dropdown-item text-white" href="Contatti.html">Elenco contatti</a></li>
         </ul>
-      </ul>
 
-      <ul class="nav col-2 col-lg-auto mb-2 text-align-end mb-md-0">
-        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          PORTALE HR
-        </a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
+        <ul class="nav col-2 col-lg-auto mb-2 mb-md-0">
+          <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            PORTALE HR
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item text-white" href="LetteraDiRichiamo.html">Invia lettera di richiamo</a></li>
+          </ul>
         </ul>
       </ul>
     </div>
@@ -186,7 +197,7 @@
     <section id="chi-siamo">
       <div class="row text-center">
         <div class="col-md-12">
-          <h2 class="h2">CHI SIAMO</h2>
+          <h2 class="h2" id="titolo">CHI SIAMO</h2>
           </br>
           <p class="p">RecruitITSolutions è un'azienda informatica leader nel settore, dedicata a fornire soluzioni
             innovative e servizi di alta qualità ai nostri clienti. Con un team di esperti appassionati e una forte
@@ -196,13 +207,13 @@
         </div>
 
         <img src="images/Storia/storia.jpg" id="foto-storia" height="300px" width="1296px">
-      </br>
-    </div>
+        </br>
+      </div>
       <hr class="featurette-divider">
       </br>
       <div class="row text-center">
         <div class="col-md-12">
-          <h2 class="h2">LA NOSTRA STORIA</h2>
+          <h2 class="h2" id="titolo">LA NOSTRA STORIA</h2>
         </div>
       </div>
     </section>
@@ -211,56 +222,62 @@
 
     <div class="container mt-4 mb-4">
       <div class="box-anno">
-          <a href="1990.html#anno-1990" class="circle">
-            <h3 class="anno" id="anno-1990">1990</h3>
-          </a>
-          <a href="2000.html#anno-2000" class="circle">
-            <h3 class="anno" id="anno-2000">2000</h3>
-          </a>
-          <a href="2010.html#anno-2010" class="circle">
-            <h3 class="anno" id="anno-2010">2010</h3>
-          </a>
-          <a href="2024.html#anno-2024" class="circle">
-            <h3 class="anno" id="anno-2024">2024</h3>
-          </a>
+        <a href="1990.html#anno-1990" class="circle">
+          <h3 class="anno" id="anno-1990">1990</h3>
+        </a>
+        <a href="2000.html#anno-2000" class="circle">
+          <h3 class="anno" id="anno-2000">2000</h3>
+        </a>
+        <a href="2010.html#anno-2010" class="circle">
+          <h3 class="anno" id="anno-2010">2010</h3>
+        </a>
+        <a href="2024.html#anno-2024" class="circle">
+          <h3 class="anno" id="anno-2024">2024</h3>
+        </a>
       </div>
     </div>
 
 
 
-      <section id="sezione1990">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h2 class="h2">1990 - L'Avventura Pionieristica:</h2>
-                </br>
-                <p class="p">Nel 1990, un gruppo di giovani talenti informatici si riunisce per dare vita a un'azienda informatica innovativa. In un'epoca in cui i computer personali stanno diventando sempre più diffusi, questa squadra di visionari ha l'audacia di immaginare un futuro in cui la tecnologia informatica diventa accessibile a tutti. Con passione e determinazione, l'azienda sviluppa software personalizzati e offre servizi di consulenza informatica per piccole imprese e privati. Le loro soluzioni creative e il loro impegno nell'educare il pubblico sul potenziale della tecnologia li portano ad essere riconosciuti come pionieri nel settore.</p>
-            </div>
+    <section id="sezione1990">
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h2 class="h2" id="titolo">1990 - L'Avventura Pionieristica:</h2>
+          </br>
+          <p class="p">Nel 1990, un gruppo di giovani talenti informatici si riunisce per dare vita a un'azienda
+            informatica innovativa. In un'epoca in cui i computer personali stanno diventando sempre più diffusi, questa
+            squadra di visionari ha l'audacia di immaginare un futuro in cui la tecnologia informatica diventa
+            accessibile a tutti. Con passione e determinazione, l'azienda sviluppa software personalizzati e offre
+            servizi di consulenza informatica per piccole imprese e privati. Le loro soluzioni creative e il loro
+            impegno nell'educare il pubblico sul potenziale della tecnologia li portano ad essere riconosciuti come
+            pionieri nel settore.</p>
         </div>
-      </section>   
-    </div>
+      </div>
+    </section>
+  </div>
 
-    <footer class="bg-dark text-white p-4">
-      <div class="box-footer">
+  <footer class="bg-dark text-white p-4">
+    <div class="box-footer">
       <div class="text-align-start">
-          <span class="justify-content-center">📞+39 123 4567 890
-          </span>
-        </div>
-        <div class="text-align-center">
-          <span class="justify-content-center">© RecruitITSolutions
-          </span>
-        </div>
-        <ul class="nav d-flex col-text-align-end mb-md-0">
-          <li class="justify-content-center"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
-                src="images/Home Page/Footer/Instagram.jpg" class="bi" width="40px" height="40px"
-                title="Instagram"></img></a></li>
-          <li class="justify-content-center"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
-                src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a></li>
-        </ul>
+        <span class="justify-content-center" id="titolo">📞+39 123 4567 890
+        </span>
+      </div>
+      <div class="text-align-center">
+        <span class="justify-content-center" id="titolo">© RecruitITSolutions
+        </span>
+      </div>
+      <ul class="nav d-flex col-text-align-end mb-md-0">
+        <li class="justify-content-center"><a class="text-body-secondary" href="Instagram.html" target="_blank"><img
+              src="images/Home Page/Footer/Instagram.jpg" class="bi" width="40px" height="40px"
+              title="Instagram"></img></a></li>
+        <li class="justify-content-center"><a class="text-body-secondary" href="RecruitITSolutions.html"><img
+              src="images/Home Page/Footer/home.jpg" class="bi" width="40px" height="40px" title="Home"></img></a></li>
+      </ul>
     </div>
-    </footer>
+  </footer>
 
 
 
-  </body>
+</body>
 
 </html>
